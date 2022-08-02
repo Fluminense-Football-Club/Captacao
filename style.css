@@ -1,0 +1,157 @@
+@import url('./reset.css');
+body{
+ height: 1100px; 
+ width:803px ; 
+ margin: 0;
+ padding: 0;
+ margin:0px auto;
+}
+
+.container{
+  margin-top: 40px;
+  width: 793px;
+  height: 1080px;    
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.container-interno{
+  width: 720px;
+  height: 1070px;
+  margin: 0 auto;
+}
+
+.linha1{
+  display: flex;
+  justify-content: end;
+  gap: 150px;
+}
+
+.container-interno p{
+  justify-items: center;
+  text-transform: uppercase ;
+  font-weight: 600;
+  padding-top: 10px;
+}
+
+.container-interno span {
+  align-self: end;
+  
+}
+
+.linha2{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.linha2 h1{
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+  justify-self: center;
+  font-size: 1.50rem;
+}
+
+.linha2 img{
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.linha2 p{
+  align-self: center;
+}
+
+.telefones{
+  display: grid;  
+  grid-template-columns: 300px 200px 200px;   
+  justify-items: center; 
+  gap: 10px;
+}
+
+.telefones p{
+  grid-column: 2;
+}
+
+.telefones p:last-child{
+  grid-column: 3;
+}
+
+
+
+.col2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  
+  /* border: 1px solid black; */
+}
+
+.col2 p{
+  grid-column: 1/-1;
+}
+
+.deptFisio p{
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.col3{
+  display: grid;  
+  grid-template-columns: 300px 200px 200px;
+  gap: 10px;  
+}
+
+.col4{
+  display: grid;
+  gap: 10px;
+  grid-template-columns:auto 1fr auto 1fr ;
+}
+
+.col4 p{
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.col4 .assinatura{
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.info-atleta{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+}
+
+.cidade p::after{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: rgb(19, 18, 18);
+  right: 830px;
+  top: 247px;
+}
+
+.col6{
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto 1fr;
+  gap: 10px;
+  align-items: center;
+  background-color: rgb(222, 226, 226);
+}
+
+.col6 p{
+  grid-column: 1/-1;
+  text-align: center;  
+}
+.itens{
+  display: flex;
+}
+
+
+
+

@@ -4,8 +4,11 @@ body{
   height: 1140px; 
   width:783px ;  
   margin:0 auto;
-  border: 1px solid rgb(173, 9, 9);
-  
+  border: 1px solid rgb(173, 9, 9);  
+ }
+
+ .border{
+  border: 1px solid black;
  }
  
  span{
@@ -88,11 +91,14 @@ body{
  
  .col2{
    display: grid;
-   grid-template-columns: 1fr 1fr;
-   
-   gap: 2px;
-   
-   /* border: 1px solid black; */
+   grid-template-columns: 1fr 1fr;   
+   gap: 2px;  
+ }
+
+ .col2-auto{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* border: solid 1px black; */
  }
  
  
@@ -113,16 +119,7 @@ body{
  .col2.atlAprovados h1{
    font-size: 0.7rem;
  }
- 
- 
- .deptFisio h5:nth-child(4),.deptFisio span:nth-child(5){    
-   grid-column: 1/-1;
-   text-align: center;  
- }
- 
- 
- 
- .col3{
+  .col3{
    display: grid;  
    grid-template-columns: 300px 200px 200px;
    gap: 10px;  
@@ -144,6 +141,17 @@ body{
  .col4 .assinatura{
    grid-column: 1/-1;
    text-align: center;
+ }
+
+ .col4-fr{
+  display: grid;
+  grid-template-columns: 4fr;
+  border: solid 1px black;
+ }
+
+ .col4-fr p{
+  grid-column: 1/-1;
+  text-align: center;
  }
  
  .col6{
@@ -197,6 +205,9 @@ body{
    display: flex;
  }
  
-
+ .deptFisio h5:nth-child(4),.deptFisio span:nth-child(5){    
+  grid-column: 1/-1;
+  text-align: center;  
+}
 
 

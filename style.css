@@ -184,6 +184,7 @@ body{
  .col2-1fr .categoria{
    display: grid;
    grid-template-columns:repeat(5,auto 1fr ) ;  
+   
  }
  
  .col2-1fr .etapa{
@@ -208,6 +209,10 @@ body{
  .deptFisio h5:nth-child(4),.deptFisio span:nth-child(5){    
   grid-column: 1/-1;
   text-align: center;  
+}
+
+[disabled]{
+  color: black;
 }
 
 

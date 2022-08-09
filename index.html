@@ -65,50 +65,82 @@
 
       <!-- Informações do atleta -->
       <div class="col2-1fr">
-        <div class="nome">
+        <div class="nome" >
           <p>nome completo do atleta</p>
-          <input type="text">
+          <input type="text" id="nomeFrm1">
         </div>
         <div class="identidade">
           <p>identidade</p>
-          <input type="text">
+          <input type="text" id="idtFrm1">
         </div>
       </div>
       <!-- Posição, Data de nascimento, Indicação -->
       <div class="col3">
         <div class="posicao">
           <p>Posição</p>
-          <input type="text">
+          <input type="text" id="posFrm1">
         </div>
         <div class="dt-nasc">
           <p>Data Nascimento</p>
-          <input type="text">
+          <input type="date" id="dtNascFrm1">
         </div>
 
         <div class="indicacao">
           <p>Indicação</p>
-          <input type="text">
+          <input type="text" id="indFrm1">
         </div>
       </div>
 
       <div class="col3">
         <div class="cidade">
           <p>Cidade</p>
-          <input type="text">
+          <div class="col2-auto">
+            <select name="estados-brasil" id="estados-brasil">
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+            <input type="text" id="sg-estado">
+
+          </div>
         </div>
         <div class="ultClube">
           <p>Último clube</p>
-          <input type="text">
+          <input type="text" id="ultClubeFrm1">
         </div>
         <div class="indFlu">
           <p>Ind. Fluminense</p>
-          <input type="text">
+          <input type="text" id="indFluFrm1">
         </div>
       </div>
 
       <!-- Necessidades / Pé preferencial -->
       <div class="col2">
-        <div class="col6">
+        <div class="col6" id="necessidadesFrm1">
           <p>necessidades</p>
           <input type="checkbox">
           <label for="almoxarifado">Almox</label>
@@ -120,7 +152,7 @@
           <label for="almoxarifado">Transporte</label>
         </div>
 
-        <div class="col6">
+        <div class="col6" id="pePreferencialFrm1">
           <p>Pé preferencial</p>
           <input type="checkbox">
           <label for="almoxarifado">Destro</label>
@@ -241,59 +273,63 @@
       <div class="col2-1fr">
         <div class="nome">
           <p>nome completo do atleta</p>
-          <input type="text">
+          <input type="text" id="nomeFrm2">
         </div>
         <div class="identidade">
           <p>identidade</p>
-          <input type="text">
+          <input type="text" id="idtFrm2">
         </div>
       </div>
       <!-- Posição, Data de nascimento, Indicação -->
       <div class="col3">
         <div class="posicao">
           <p>Posição</p>
-          <input type="text">
+          <input type="text" id="posFrm2">
         </div>
         <div class="dt-nasc">
           <p>Data Nascimento</p>
-          <input type="text">
+          <input type="date" id="dtNascFrm2">
         </div>
 
         <div class="indicacao">
           <p>Indicação</p>
-          <input type="text">
+          <input type="text" id="indFrm2">
         </div>
       </div>
 
       <div class="col3">
         <div class="cidade">
           <p>Cidade</p>
-          <input type="text">
+          <div class="col2-auto">
+            <input type="text" id="frm2_Select_cid" disabled>
+            <input type="text" id="frm2_Select_cid_abrev" disabled>
+          </div>
+
         </div>
         <div class="ultClube">
           <p>Último clube</p>
-          <input type="text">
+          <input type="text" id="ultClubeFrm2">
         </div>
         <div class="indFlu">
           <p>Ind. Fluminense</p>
-          <input type="text">
+          <input type="text" id="indFlu">
         </div>
       </div>
       <!-- Necessidades / Pé preferencial -->
       <div class="col2">
-        <div class="col6">
+        <div class="col6" id="necessidadesFrm2">
           <p>necessidades</p>
           <input type="checkbox">
           <label for="almoxarifado">Almox</label>
 
           <input type="checkbox">
-          <label for="almoxarifado">Alojamento</label>
+          <label for="Alojamento">Alojamento</label>
 
           <input type="checkbox">
           <label for="almoxarifado">Transporte</label>
         </div>
 
-        <div class="col6">
+        <div class="col6" id="pePreferencialFrm2">
           <p>Pé preferencial</p>
           <input type="checkbox">
           <label for="almoxarifado">Destro</label>
@@ -379,7 +415,7 @@
 
             <div class="border">
               <p class="border">Fundamentos Goleiros</p>
-              <div class="col2 border">                
+              <div class="col2 border">
                 <div class="col2-auto">
                   <span>Agilidade</span>
                   <input type="checkbox" name="" id="">
@@ -403,13 +439,15 @@
                   <input type="checkbox" name="" id="">
                   <span>Saída Bola Baixa</span>
                   <input type="checkbox" name="" id="">
-                </div>                
-              </div>              
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div><pre>legenda: 01-Muito Fraco    02-Fraco    03-Regular    4-Bom    05-Muito Bom</pre></div>
+      <div>
+        <pre>legenda: 01-Muito Fraco    02-Fraco    03-Regular    4-Bom    05-Muito Bom</pre>
+      </div>
 
       <div>
         <span>Parecer:______________________________________________________________________________________________________________________</span><br>
@@ -425,7 +463,7 @@
 
 
 
-
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -44,19 +44,14 @@ const pePreferencialFrm2 = document.querySelectorAll('#pePreferencialFrm2 input'
 const vetor =[[nomeAtletaFrm1,nomeAtletaFrm2],[identidadeFrm1,identidadeFrm2],[posicaoFrm1,posicaoFrm2],[dtNascimentoFrm1,dtNascimentoFrm2],[indicacaoFrm1,indicacaoFrm2],[ultClubeFrm1,ultClubeFrm2],[indFluFrm1,indFluFrm2]]
 
 
-function clonarCampos([cmpSelecionado,cmpCopiado],i){  
+function clonarCampos([cmpSelecionado,cmpCopiado]){  
   cmpSelecionado.addEventListener('keyup', () => {    
-    cmpCopiado.value = cmpSelecionado.value
-    console.log(i)
-  })
-  
+    cmpCopiado.value = cmpSelecionado.value    
+  })  
 }
 clonarCidade(frm1_Select_cid, sg, frm2_Select_cid_abrev, frm2_Select_cid);
 
 //  clonarCampos(nomeAtletaFrm1,nomeAtletaFrm2)
-
-
-
 
 vetor.forEach(clonarCampos)
 

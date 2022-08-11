@@ -1,8 +1,13 @@
 @import url("./reset.css");
 @import url("./header.css");
 
-body {  
-  height: 900px; /**/
+
+body{
+  width: 100%;
+  margin-bottom: 100px;
+}
+.geral {  
+  height: 700px; /**/
   width: 783px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -11,10 +16,7 @@ body {
   margin-top: 100px;
 }
 
-.geral{
-  display: grid;  
-  
-}
+
 
 
 

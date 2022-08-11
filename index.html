@@ -9,474 +9,471 @@
 </head>
 
 <body>
-
   <header class="topo">
     <!-- <img src="./img/escudo.png" alt=""> -->
     <div class="faixaVerm">
-        <span>Captação</span>
+      <span>Captação</span>
     </div>
     <div class="faixaBranca">
-        <h1>FLUMINENSEFC</h1>
+      <h1>FLUMINENSEFC</h1>
     </div>
     <div class="faixaVerde"></div>
-</header>
-
-
-
-  <button type="submit" id="botao">Salvar como pdf</button>
-  <div class="container" id="printable">
-    <!-- Linha1 -->
-    <div class="container-interno">
-      <div class="linha1">
-        <p>ficha de avaliação</p>
-        <span>N°____________</span>
-      </div>
-      <!-- Linha2 -->
-      <div class="linha2">
-        <img src="./img/escudo.png" alt="">
-        <h1>centro de treinamento vale das laranjeiras</h1>
-        <p>saída : ___/___/______</p>
-      </div>
-
-      <!-- telefones-nome -->
-      <div class="telefones">
-        <p>telefone p/contato</p>
-        <p>telefone p/contato</p>
-      </div>
-
-      <!-- telefones formulário -->
-      <div class="col3">
-        <input type="tel">
-        <input type="tel" name="tel">
-        <input type="tel" name="tel">
-      </div>
-
-      <!-- Categoria e Etapa -->
-      <div class="col2-1fr">
-        <div class="categoria">
-          <p>Categoria</p>
-          <span>Junior</span>
-          <input type="radio" name="categoriaFrm1" id="">
-          <span>Juvenil</span>
-          <input type="radio" name="categoriaFrm1" id="">
-          <span>Infantil</span>
-          <input type="radio" name="categoriaFrm1" id="">
-          <span>Mirim</span>
-          <input type="radio" name="categoriaFrm1" id="">
-          <span>Pré Mirim</span>
-          <input type="radio" name="categoriaFrm1" id="">
+  </header>
+  <div class="geral">
+    <button type="submit" id="botao">Salvar como pdf</button>
+    <div class="container" id="printable">
+      <!-- Linha1 -->
+      <div class="container-interno">
+        <div class="linha1">
+          <p>ficha de avaliação</p>
+          <span>N°____________</span>
+        </div>
+        <!-- Linha2 -->
+        <div class="linha2">
+          <img src="./img/escudo.png" alt="">
+          <h1>centro de treinamento vale das laranjeiras</h1>
+          <p>saída : ___/___/______</p>
         </div>
 
-        <div class="etapa">
-          <p>Etapa</p>
-          <span>Adaptação</span>
-          <input type="radio" name="etapaFrm1" id="">
-          <span>Gr.principal</span>
-          <input type="radio" name="etapaFrm1" id="">
-          <span>Contratado</span>
-          <input type="radio" name="etapaFrm1" id="">
-        </div>
-      </div>
-
-      <!-- Informações do atleta -->
-      <div class="col2-1fr">
-        <div class="nome" >
-          <p>nome completo do atleta</p>
-          <input type="text" id="nomeFrm1">
-        </div>
-        <div class="identidade">
-          <p>identidade</p>
-          <input type="text" id="idtFrm1">
-        </div>
-      </div>
-      <!-- Posição, Data de nascimento, Indicação -->
-      <div class="col3">
-        <div class="posicao">
-          <p>Posição</p>
-          <input type="text" id="posFrm1">
-        </div>
-        <div class="dt-nasc">
-          <p>Data Nascimento</p>
-          <input type="text" id="dtNascFrm1" >
+        <!-- telefones-nome -->
+        <div class="telefones">
+          <p>telefone p/contato</p>
+          <p>telefone p/contato</p>
         </div>
 
-        <div class="indicacao">
-          <p>Indicação</p>
-          <input type="text" id="indFrm1">
+        <!-- telefones formulário -->
+        <div class="col3">
+          <input type="tel">
+          <input type="tel" name="tel">
+          <input type="tel" name="tel">
         </div>
-      </div>
 
-      <div class="col3">
-        <div class="cidade">
-          <p>Cidade</p>
-          <div class="col2-auto">
-            <select name="estados-brasil" id="estados-brasil">
-              <option value="AC">Acre</option>
-              <option value="AL">Alagoas</option>
-              <option value="AP">Amapá</option>
-              <option value="AM">Amazonas</option>
-              <option value="BA">Bahia</option>
-              <option value="CE">Ceará</option>
-              <option value="DF">Distrito Federal</option>
-              <option value="ES">Espírito Santo</option>
-              <option value="GO">Goiás</option>
-              <option value="MA">Maranhão</option>
-              <option value="MT">Mato Grosso</option>
-              <option value="MS">Mato Grosso do Sul</option>
-              <option value="MG">Minas Gerais</option>
-              <option value="PA">Pará</option>
-              <option value="PB">Paraíba</option>
-              <option value="PR">Paraná</option>
-              <option value="PE">Pernambuco</option>
-              <option value="PI">Piauí</option>
-              <option value="RJ">Rio de Janeiro</option>
-              <option value="RN">Rio Grande do Norte</option>
-              <option value="RS">Rio Grande do Sul</option>
-              <option value="RO">Rondônia</option>
-              <option value="RR">Roraima</option>
-              <option value="SC">Santa Catarina</option>
-              <option value="SP">São Paulo</option>
-              <option value="SE">Sergipe</option>
-              <option value="TO">Tocantins</option>
-            </select>
-            <input type="text" id="sg-estado">
+        <!-- Categoria e Etapa -->
+        <div class="col2-1fr">
+          <div class="categoria">
+            <p>Categoria</p>
+            <span>Junior</span>
+            <input type="radio" name="categoriaFrm1" id="">
+            <span>Juvenil</span>
+            <input type="radio" name="categoriaFrm1" id="">
+            <span>Infantil</span>
+            <input type="radio" name="categoriaFrm1" id="">
+            <span>Mirim</span>
+            <input type="radio" name="categoriaFrm1" id="">
+            <span>Pré Mirim</span>
+            <input type="radio" name="categoriaFrm1" id="">
+          </div>
 
+          <div class="etapa">
+            <p>Etapa</p>
+            <span>Adaptação</span>
+            <input type="radio" name="etapaFrm1" id="">
+            <span>Gr.principal</span>
+            <input type="radio" name="etapaFrm1" id="">
+            <span>Contratado</span>
+            <input type="radio" name="etapaFrm1" id="">
           </div>
         </div>
-        <div class="ultClube">
-          <p>Último clube</p>
-          <input type="text" id="ultClubeFrm1">
-        </div>
-        <div class="indFlu">
-          <p>Ind. Fluminense</p>
-          <input type="text" id="indFluFrm1">
-        </div>
-      </div>
 
-      <!-- Necessidades / Pé preferencial -->
-      <div class="col2">
-        <div class="col6" id="necessidadesFrm1">
-          <p>necessidades</p>
-          <input type="checkbox">
-          <label for="almoxarifado">Almox</label>
-
-          <input type="checkbox">
-          <label for="almoxarifado">Alojamento</label>
-
-          <input type="checkbox">
-          <label for="almoxarifado">Transporte</label>
-        </div>
-
-        <div class="col6" id="pePreferencialFrm1">
-          <p>Pé preferencial</p>
-          <input type="checkbox">
-          <label for="almoxarifado">Destro</label>
-
-          <input type="checkbox">
-          <label for="almoxarifado">Canhoto</label>
-
-          <input type="checkbox">
-          <label for="almoxarifado">Ambidestro</label>
-        </div>
-      </div>
-      <!-- Dept. Médico / Dept. Fisiologia -->
-      <div class="col2">
-        <div class="col4">
-          <p>dept. médico</p>
-          <input type="radio" name="deptMedico">
-          <span>Apto</span>
-          <input type="radio" name="deptMedico">
-          <span><span>não</span> apto</span>
-          <p>Atestado Médico</p>
-          <input type="radio" name="atestMedico">
-          <span>Sim</span>
-          <input type="radio" name="atestMedico">
-          <span>Não</span>
-          <p>______________________________________</p>
-          <span class="assinatura">Assinatura do médico responsável</span>
-        </div>
-        <div class="col2 deptFisio">
-          <p>dept. fisiologia</p>
-          <div>
-            <h5>_______________</h5>
-            <span>Peso</span>
-            <h5>_______________</h5>
-            <span>Est.Preditiva</span>
+        <!-- Informações do atleta -->
+        <div class="col2-1fr">
+          <div class="nome">
+            <p>nome completo do atleta</p>
+            <input type="text" id="nomeFrm1">
           </div>
-          <div>
-            <h5>_______________</h5>
-            <span>Estatura</span>
-
-            <h5>_______________</h5>
-            <span>Taxa de Maturação</span>
-
-
+          <div class="identidade">
+            <p>identidade</p>
+            <input type="text" id="idtFrm1">
           </div>
-          <h5>__________________________________________</h5>
-          <span>Assinatura e carimbo</span>
         </div>
-      </div>
-      <!-- Encaminhamento para atletas aprovados -->
-      <div class="col2 atlAprovados">
-        <p>Encaminhamento para atletas aprovados</p>
+        <!-- Posição, Data de nascimento, Indicação -->
+        <div class="col3">
+          <div class="posicao">
+            <p>Posição</p>
+            <input type="text" id="posFrm1">
+          </div>
+          <div class="dt-nasc">
+            <p>Data Nascimento</p>
+            <input type="text" id="dtNascFrm1">
+          </div>
 
-        <div>
-          <h1>DPT° ADMINISTRAÇÃO</h1>
-          <span>Assinatura e Carimbo</span>
-        </div>
-
-        <div>
-          <h1>DPT° SERVIÇO SOCIAL</h1>
-          <span>Assinatura e Carimbo</span>
-        </div>
-
-        <div>
-          <h1>DPT° PSICOLOGIA</h1>
-          <span>Assinatura e Carimbo</span>
+          <div class="indicacao">
+            <p>Indicação</p>
+            <input type="text" id="indFrm1">
+          </div>
         </div>
 
-        <div>
-          <h1>DPT° NUTRIÇÃO</h1>
-          <span>Assinatura e Carimbo</span>
+        <div class="col3">
+          <div class="cidade">
+            <p>Cidade</p>
+            <div class="col2-auto">
+              <select name="estados-brasil" id="estados-brasil">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
+              <input type="text" id="sg-estado">
+
+            </div>
+          </div>
+          <div class="ultClube">
+            <p>Último clube</p>
+            <input type="text" id="ultClubeFrm1">
+          </div>
+          <div class="indFlu">
+            <p>Ind. Fluminense</p>
+            <input type="text" id="indFluFrm1">
+          </div>
         </div>
-      </div>
-      <!-- 2° Parte do Formulário -->
-      <div class="col2">
-        <div class="topoForm2">
-          <h1>Centro de Treinamento</h1>
-          <span>Entrada:_____/_____/______</span>
+
+        <!-- Necessidades / Pé preferencial -->
+        <div class="col2">
+          <div class="col6" id="necessidadesFrm1">
+            <p>necessidades</p>
+            <input type="checkbox">
+            <label for="almoxarifado">Almox</label>
+
+            <input type="checkbox">
+            <label for="almoxarifado">Alojamento</label>
+
+            <input type="checkbox">
+            <label for="almoxarifado">Transporte</label>
+          </div>
+
+          <div class="col6" id="pePreferencialFrm1">
+            <p>Pé preferencial</p>
+            <input type="checkbox">
+            <label for="almoxarifado">Destro</label>
+
+            <input type="checkbox">
+            <label for="almoxarifado">Canhoto</label>
+
+            <input type="checkbox">
+            <label for="almoxarifado">Ambidestro</label>
+          </div>
         </div>
-        <div class="topoForm2-1">
-          <h1>Vale das Laranjeiras</h1>
-          <span>Saída:_____/_____/______</span>
+        <!-- Dept. Médico / Dept. Fisiologia -->
+        <div class="col2">
           <div class="col4">
-            <input type="radio" name="situacao">
-            <span>APROVADO</span>
-            <input type="radio" name="situacao">
-            <span>DISPENSADO</span>
+            <p>dept. médico</p>
+            <input type="radio" name="deptMedico">
+            <span>Apto</span>
+            <input type="radio" name="deptMedico">
+            <span><span>não</span> apto</span>
+            <p>Atestado Médico</p>
+            <input type="radio" name="atestMedico">
+            <span>Sim</span>
+            <input type="radio" name="atestMedico">
+            <span>Não</span>
+            <p>______________________________________</p>
+            <span class="assinatura">Assinatura do médico responsável</span>
+          </div>
+          <div class="col2 deptFisio">
+            <p>dept. fisiologia</p>
+            <div>
+              <h5>_______________</h5>
+              <span>Peso</span>
+              <h5>_______________</h5>
+              <span>Est.Preditiva</span>
+            </div>
+            <div>
+              <h5>_______________</h5>
+              <span>Estatura</span>
+
+              <h5>_______________</h5>
+              <span>Taxa de Maturação</span>
+
+
+            </div>
+            <h5>__________________________________________</h5>
+            <span>Assinatura e carimbo</span>
           </div>
         </div>
-      </div>
+        <!-- Encaminhamento para atletas aprovados -->
+        <div class="col2 atlAprovados">
+          <p>Encaminhamento para atletas aprovados</p>
 
-      <!-- Categoria e Etapa -->
-      <div class="col2-1fr">
-        <div class="categoria">
-          <p>Categoria</p>
-          <span>Junior</span>
-          <input type="radio" name="categoriaFrm2" id="">
-          <span>Juvenil</span>
-          <input type="radio" name="categoriaFrm2" id="">
-          <span>Infantil</span>
-          <input type="radio" name="categoriaFrm2"id="">
-          <span>Mirim</span>
-          <input type="radio" name="categoriaFrm2"id="">
-          <span>Pré Mirim</span>
-          <input type="radio" name="categoriaFrm2"id="">
-        </div>
-
-        <div class="etapa">
-          <p>Etapa</p>
-          <span>Adaptação</span>
-          <input type="radio" name="etapaFrm2" id="">
-          <span>Gr.principal</span>
-          <input type="radio" name="etapaFrm2"id="2">
-          <span>Contratado</span>
-          <input type="radio" name="etapaFrm2"id="1">
-        </div>
-      </div>
-      <!-- Informações do atleta -->
-      <div class="col2-1fr">
-        <div class="nome">
-          <p>nome completo do atleta</p>
-          <input type="text" id="nomeFrm2">
-        </div>
-        <div class="identidade">
-          <p>identidade</p>
-          <input type="text" id="idtFrm2">
-        </div>
-      </div>
-      <!-- Posição, Data de nascimento, Indicação -->
-      <div class="col3">
-        <div class="posicao">
-          <p>Posição</p>
-          <input type="text" id="posFrm2">
-        </div>
-        <div class="dt-nasc">
-          <p>Data Nascimento</p>
-          <input type="text" id="dtNascFrm2">
-        </div>
-
-        <div class="indicacao">
-          <p>Indicação</p>
-          <input type="text" id="indFrm2">
-        </div>
-      </div>
-
-      <div class="col3">
-        <div class="cidade">
-          <p>Cidade</p>
-          <div class="col2-auto">
-            <input type="text" id="frm2_Select_cid" disabled>
-            <input type="text" id="frm2_Select_cid_abrev" disabled>
-          </div>
-
-        </div>
-        <div class="ultClube">
-          <p>Último clube</p>
-          <input type="text" id="ultClubeFrm2">
-        </div>
-        <div class="indFlu">
-          <p>Ind. Fluminense</p>
-          <input type="text" id="indFluFrm2">
-        </div>
-      </div>
-      <!-- Necessidades / Pé preferencial -->
-      <div class="col2">
-        <div class="col6" id="necessidadesFrm2">
-          <p>necessidades</p>
-          <input type="checkbox" name="necessFrm2">
-          <label for="almoxarifado">Almox</label>
-
-          <input type="checkbox" name="necessFrm2">
-          <label for="Alojamento">Alojamento</label>
-
-          <input type="checkbox">
-          <label for="almoxarifado">Transporte</label>
-        </div>
-
-        <div class="col6" id="pePreferencialFrm2">
-          <p>Pé preferencial</p>
-          <input type="checkbox">
-          <label for="almoxarifado">Destro</label>
-
-          <input type="checkbox">
-          <label for="almoxarifado">Canhoto</label>
-
-          <input type="checkbox">
-          <label for="almoxarifado">Ambidestro</label>
-        </div>
-      </div>
-      <!-- Dept. Médico / Dept. Fisiologia -->
-      <div class="col2">
-        <div class="col4">
-          <p>dept. médico</p>
-          <input type="radio" name="deptMedFrm2Apt">
-          <span>Apto</span>
-          <input type="radio" name="deptMedFrm2Apt">
-          <span><span>não</span> apto</span>
-          <p>Atestado Médico</p>
-          <input type="radio" name="deptMedFrm2">
-          <span>Sim</span>
-          <input type="radio" name="deptMedFrm2">
-          <span>Não</span>
-          <p>______________________________________</p>
-          <span class="assinatura">Assinatura do médico responsável</span>
-        </div>
-        <div class="col2 deptFisio">
-          <p>dept. fisiologia</p>
           <div>
-            <h5>_______________</h5>
-            <span>Peso</span>
-            <h5>_______________</h5>
-            <span>Est.Preditiva</span>
+            <h1>DPT° ADMINISTRAÇÃO</h1>
+            <span>Assinatura e Carimbo</span>
           </div>
+
           <div>
-            <h5>_______________</h5>
-            <span>Estatura</span>
-
-            <h5>_______________</h5>
-            <span>Taxa Maturação</span>
-
-
+            <h1>DPT° SERVIÇO SOCIAL</h1>
+            <span>Assinatura e Carimbo</span>
           </div>
-          <h5>__________________________________________</h5>
-          <span>Assinatura e carimbo</span>
+
+          <div>
+            <h1>DPT° PSICOLOGIA</h1>
+            <span>Assinatura e Carimbo</span>
+          </div>
+
+          <div>
+            <h1>DPT° NUTRIÇÃO</h1>
+            <span>Assinatura e Carimbo</span>
+          </div>
         </div>
-      </div>
-      <!-- conceito das características técnicas do atleta -->
-      <div class="col4-fr">
-        <p>conceito das características técnicas do atleta</p>
-        <div class="col2-auto">
-          <div class="col2-auto border">
-            <p class="border">Componentes técnicos</p>
-            <span>Cabeceio</span>
-            <input type="checkbox" name="" id="">
-            <span>Chute</span>
-            <input type="checkbox" name="" id="">
-            <span>Cruzamento</span>
-            <input type="checkbox" name="" id="">
-            <span>Passe</span>
-            <input type="checkbox" name="" id="">
-            <span>Recepção</span>
-            <input type="checkbox" name="" id="">
-            <span>Drible</span>
-            <input type="checkbox" name="" id="">
+        <!-- 2° Parte do Formulário -->
+        <div class="col2">
+          <div class="topoForm2">
+            <h1>Centro de Treinamento</h1>
+            <span>Entrada:_____/_____/______</span>
+          </div>
+          <div class="topoForm2-1">
+            <h1>Vale das Laranjeiras</h1>
+            <span>Saída:_____/_____/______</span>
+            <div class="col4">
+              <input type="radio" name="situacao">
+              <span>APROVADO</span>
+              <input type="radio" name="situacao">
+              <span>DISPENSADO</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categoria e Etapa -->
+        <div class="col2-1fr">
+          <div class="categoria">
+            <p>Categoria</p>
+            <span>Junior</span>
+            <input type="radio" name="categoriaFrm2" id="">
+            <span>Juvenil</span>
+            <input type="radio" name="categoriaFrm2" id="">
+            <span>Infantil</span>
+            <input type="radio" name="categoriaFrm2" id="">
+            <span>Mirim</span>
+            <input type="radio" name="categoriaFrm2" id="">
+            <span>Pré Mirim</span>
+            <input type="radio" name="categoriaFrm2" id="">
           </div>
 
+          <div class="etapa">
+            <p>Etapa</p>
+            <span>Adaptação</span>
+            <input type="radio" name="etapaFrm2" id="">
+            <span>Gr.principal</span>
+            <input type="radio" name="etapaFrm2" id="2">
+            <span>Contratado</span>
+            <input type="radio" name="etapaFrm2" id="1">
+          </div>
+        </div>
+        <!-- Informações do atleta -->
+        <div class="col2-1fr">
+          <div class="nome">
+            <p>nome completo do atleta</p>
+            <input type="text" id="nomeFrm2">
+          </div>
+          <div class="identidade">
+            <p>identidade</p>
+            <input type="text" id="idtFrm2">
+          </div>
+        </div>
+        <!-- Posição, Data de nascimento, Indicação -->
+        <div class="col3">
+          <div class="posicao">
+            <p>Posição</p>
+            <input type="text" id="posFrm2">
+          </div>
+          <div class="dt-nasc">
+            <p>Data Nascimento</p>
+            <input type="text" id="dtNascFrm2">
+          </div>
+
+          <div class="indicacao">
+            <p>Indicação</p>
+            <input type="text" id="indFrm2">
+          </div>
+        </div>
+
+        <div class="col3">
+          <div class="cidade">
+            <p>Cidade</p>
+            <div class="col2-auto">
+              <input type="text" id="frm2_Select_cid" disabled>
+              <input type="text" id="frm2_Select_cid_abrev" disabled>
+            </div>
+
+          </div>
+          <div class="ultClube">
+            <p>Último clube</p>
+            <input type="text" id="ultClubeFrm2">
+          </div>
+          <div class="indFlu">
+            <p>Ind. Fluminense</p>
+            <input type="text" id="indFluFrm2">
+          </div>
+        </div>
+        <!-- Necessidades / Pé preferencial -->
+        <div class="col2">
+          <div class="col6" id="necessidadesFrm2">
+            <p>necessidades</p>
+            <input type="checkbox" name="necessFrm2">
+            <label for="almoxarifado">Almox</label>
+
+            <input type="checkbox" name="necessFrm2">
+            <label for="Alojamento">Alojamento</label>
+
+            <input type="checkbox">
+            <label for="almoxarifado">Transporte</label>
+          </div>
+
+          <div class="col6" id="pePreferencialFrm2">
+            <p>Pé preferencial</p>
+            <input type="checkbox">
+            <label for="almoxarifado">Destro</label>
+
+            <input type="checkbox">
+            <label for="almoxarifado">Canhoto</label>
+
+            <input type="checkbox">
+            <label for="almoxarifado">Ambidestro</label>
+          </div>
+        </div>
+        <!-- Dept. Médico / Dept. Fisiologia -->
+        <div class="col2">
+          <div class="col4">
+            <p>dept. médico</p>
+            <input type="radio" name="deptMedFrm2Apt">
+            <span>Apto</span>
+            <input type="radio" name="deptMedFrm2Apt">
+            <span><span>não</span> apto</span>
+            <p>Atestado Médico</p>
+            <input type="radio" name="deptMedFrm2">
+            <span>Sim</span>
+            <input type="radio" name="deptMedFrm2">
+            <span>Não</span>
+            <p>______________________________________</p>
+            <span class="assinatura">Assinatura do médico responsável</span>
+          </div>
+          <div class="col2 deptFisio">
+            <p>dept. fisiologia</p>
+            <div>
+              <h5>_______________</h5>
+              <span>Peso</span>
+              <h5>_______________</h5>
+              <span>Est.Preditiva</span>
+            </div>
+            <div>
+              <h5>_______________</h5>
+              <span>Estatura</span>
+
+              <h5>_______________</h5>
+              <span>Taxa Maturação</span>
+
+
+            </div>
+            <h5>__________________________________________</h5>
+            <span>Assinatura e carimbo</span>
+          </div>
+        </div>
+        <!-- conceito das características técnicas do atleta -->
+        <div class="col4-fr">
+          <p>conceito das características técnicas do atleta</p>
           <div class="col2-auto">
             <div class="col2-auto border">
-              <p class="border">Componentes táticos</p>
-              <span>Marcação</span>
+              <p class="border">Componentes técnicos</p>
+              <span>Cabeceio</span>
               <input type="checkbox" name="" id="">
-              <span>Deslocamento</span>
+              <span>Chute</span>
               <input type="checkbox" name="" id="">
-              <span>Posicionamento</span>
+              <span>Cruzamento</span>
               <input type="checkbox" name="" id="">
-              <span>Reposição</span>
+              <span>Passe</span>
               <input type="checkbox" name="" id="">
-              <span>Percepção</span>
+              <span>Recepção</span>
+              <input type="checkbox" name="" id="">
+              <span>Drible</span>
               <input type="checkbox" name="" id="">
             </div>
 
-            <div class="border">
-              <p class="border">Fundamentos Goleiros</p>
-              <div class="col2 border">
-                <div class="col2-auto">
-                  <span>Agilidade</span>
-                  <input type="checkbox" name="" id="">
-                  <span>Reflexo</span>
-                  <input type="checkbox" name="" id="">
-                  <span>Firmeza Pegada</span>
-                  <input type="checkbox" name="" id="">
-                  <span>Defesa Bola Alta</span>
-                  <input type="checkbox" name="" id="">
-                  <span>Defesa Bola Baixa</span>
-                  <input type="checkbox" name="" id="">
-                </div>
+            <div class="col2-auto">
+              <div class="col2-auto border">
+                <p class="border">Componentes táticos</p>
+                <span>Marcação</span>
+                <input type="checkbox" name="" id="">
+                <span>Deslocamento</span>
+                <input type="checkbox" name="" id="">
+                <span>Posicionamento</span>
+                <input type="checkbox" name="" id="">
+                <span>Reposição</span>
+                <input type="checkbox" name="" id="">
+                <span>Percepção</span>
+                <input type="checkbox" name="" id="">
+              </div>
+
+              <div class="border">
+                <p class="border">Fundamentos Goleiros</p>
+                <div class="col2 border">
+                  <div class="col2-auto">
+                    <span>Agilidade</span>
+                    <input type="checkbox" name="" id="">
+                    <span>Reflexo</span>
+                    <input type="checkbox" name="" id="">
+                    <span>Firmeza Pegada</span>
+                    <input type="checkbox" name="" id="">
+                    <span>Defesa Bola Alta</span>
+                    <input type="checkbox" name="" id="">
+                    <span>Defesa Bola Baixa</span>
+                    <input type="checkbox" name="" id="">
+                  </div>
 
 
-                <div class="col2-auto">
-                  <span>Reposição c/Mão</span>
-                  <input type="checkbox" name="" id="">
-                  <span>Reposição c/Pé</span>
-                  <input type="checkbox" name="" id="">
-                  <span>Saída Bola Aérea</span>
-                  <input type="checkbox" name="" id="">
-                  <span>Saída Bola Baixa</span>
-                  <input type="checkbox" name="" id="">
+                  <div class="col2-auto">
+                    <span>Reposição c/Mão</span>
+                    <input type="checkbox" name="" id="">
+                    <span>Reposição c/Pé</span>
+                    <input type="checkbox" name="" id="">
+                    <span>Saída Bola Aérea</span>
+                    <input type="checkbox" name="" id="">
+                    <span>Saída Bola Baixa</span>
+                    <input type="checkbox" name="" id="">
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <pre>legenda: 01-Muito Fraco    02-Fraco    03-Regular    4-Bom    05-Muito Bom</pre>
-      </div>
+        <div>
+          <pre>legenda: 01-Muito Fraco    02-Fraco    03-Regular    4-Bom    05-Muito Bom</pre>
+        </div>
 
-      <div>
-        <span>Parecer:______________________________________________________________________________________________________________________</span><br>
-        <br>
-        _______________________________________________________________________________________________<br>
-        <br>
-        _______________________________________________________________________________________________<br>
-        <br>
-        _______________________________________________________________________________________________<br>
-        <br>
-        _______________________________________________________________________________________________<br>
+        <div>
+          <span>Parecer:______________________________________________________________________________________________________________________</span><br>
+          <br>
+          _______________________________________________________________________________________________<br>
+          <br>
+          _______________________________________________________________________________________________<br>
+          <br>
+          _______________________________________________________________________________________________<br>
+          <br>
+          _______________________________________________________________________________________________<br>
+        </div>
       </div>
     </div>
-
 
 
     <script src="./script.js"></script>

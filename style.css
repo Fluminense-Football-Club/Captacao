@@ -2,10 +2,6 @@
 @import url("./header.css");
 
 
-body{
-  width: 100%;
-  margin-bottom: 100px;
-}
 .geral {  
   height: 700px; /**/
   width: 783px;

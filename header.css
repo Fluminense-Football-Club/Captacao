@@ -2,11 +2,7 @@
 .topo img {    
   display: block;
   object-fit: cover;    
-  height: 150px;  
-  position: absolute;   
-  margin-left: 900px;
-  margin-top: 30px;
-  
+  height: 150px;    
 }
 
 .faixaVerm {
@@ -21,14 +17,16 @@
   margin-left: 80px;
   color: #fcf9f9;
   font-size: 1.2rem;
+  
 }
 
 .faixaBranca {
-  display: flex;  
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
   width: 100%;
-  height: 83px;
+  height: 83px;  
   background-color: white;  
-  z-index: -2;
+  z-index: 1001;
 }
 
 .faixaBranca h1{
@@ -48,4 +46,7 @@
   /* margin-bottom: 60px; */
 }
 
-
+header{
+  display: grid;
+  
+}

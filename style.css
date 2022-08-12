@@ -5,20 +5,68 @@ body{
   height: 1600px;
 }
 
+.topoForm2{
+  display: grid;
+  grid-template-columns: 1fr auto;  
+  justify-items: end;
+}
+
+
+
+.topoForm2 img{
+  display: block;
+  width: 32px;
+  height: 32px;
+  
+}
+
+.segBotao{
+  display: grid;
+  grid-template-columns: 1fr;    
+  justify-items: center;
+  margin-bottom: 60px;
+}
+
+
+#botao, #botao2 {
+  display: grid;
+  gap: 10px;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  text-decoration: none;  
+  font-weight: 600;    
+  text-transform: uppercase;
+  color: rgb(233, 223, 223);
+  padding: 1rem 2rem;
+  background-color: rgb(8, 145, 65);
+  border-radius: 4px; 
+}
+
+/* #botao,#botao2:hover{
+  background-color: rgb(70, 160, 108);
+} */
+
+
+
+
 .geral {  
   height: auto; /**/
   width: 783px;
   margin: 0 auto;
-  box-sizing: border-box;
-  border: 1px solid red;
+  box-sizing: border-box;  
   margin-bottom: 100px;
   margin-top: 100px;
+  
 }
 
 
 
 .border {
   border: 1px solid black;
+}
+
+.strong{
+  font-weight: 600;
 }
 
 span {
@@ -29,15 +77,13 @@ span {
   width: 773px;
   height: auto;  
   margin: 0px auto;
-  box-sizing: border-box;
-  border: 1px solid green;
+  box-sizing: border-box;  
 }
 
 .container-interno {
   width: 720px;
   height: auto;
-  margin: 0 auto;
-  border: 1px solid blue;
+  margin: 0 auto;  
   box-sizing: border-box;
 }
 
@@ -247,9 +293,5 @@ span {
   }
 }
 
-button {
-  position: absolute;
-  /* margin-top: 40px; */
-  margin-right: 180px;
-}
+
 

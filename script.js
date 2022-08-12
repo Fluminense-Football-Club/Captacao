@@ -87,9 +87,10 @@ function clonarRadio([RadioFrm1, RadioFrm2]) {
   });
 }
 
-for (const key in vetorRadio) {
-  // console.log(vetorRadio[key])
-  clonarRadio([vetorRadio[key][0], vetorRadio[key][1]]);
+for (const index in vetorRadio) {
+  //  console.log(index)
+     
+   clonarRadio([vetorRadio[index][0], vetorRadio[index][1]]);
 }
 
 //  vetorRadio.forEach(clonarRadio)
@@ -97,13 +98,16 @@ for (const key in vetorRadio) {
 // clonarRadio(selecRadioFrm1,selecRadioFrm2)
 
 const selBotao = document.getElementById("botao");
+const selBotao2 = document.getElementById("botao2");
 
-selBotao.addEventListener("click", () => {
-  // const container = document.getElementById("container").innerHTML;
-  // let janela = window.open('','','width=773,height=1140')
-  // const head = document.head.innerHTML  
-  // janela.document.write(head + container)   
-  // janela.onload = janela.print();
-  // janela.close();
+function chamarEvento(botao){
+botao.addEventListener("click", () => {  
   window.print()
 });
+}
+chamarEvento(selBotao)
+chamarEvento(selBotao2)
+
+
+const testeVetor = [[[1,2],[3,4],[5,6],[7,8]], [[9,10],[11,12],[13,14],[15,16]]]
+ console.log(testeVetor[1][3][1])

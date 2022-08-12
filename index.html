@@ -20,13 +20,22 @@
     </div>
     <div class="faixaVerde"></div>
   </header>
+
+
+
   <div class="geral">
-    <button type="submit" id="botao">Salvar como pdf</button>
+    <div class="segBotao">
+      <a href="#" id="botao"><img src="./img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
+        <p>Salvar em pdf / Imprimir</p>
+      </a>
+    </div>
+
+
     <div class="container" id="printable">
       <!-- Linha1 -->
       <div class="container-interno">
         <div class="linha1">
-          <p>ficha de avaliação</p>
+          <p class="strong">ficha de avaliação</p>
           <span>N°____________</span>
         </div>
         <!-- Linha2 -->
@@ -54,15 +63,15 @@
           <div class="categoria">
             <p>Categoria</p>
             <span>Junior</span>
-            <input type="radio" name="categoriaFrm1" id="">
+            <input type="radio" name="categoriaFrm1" id="1">
             <span>Juvenil</span>
-            <input type="radio" name="categoriaFrm1" id="">
+            <input type="radio" name="categoriaFrm1" id="2">
             <span>Infantil</span>
-            <input type="radio" name="categoriaFrm1" id="">
+            <input type="radio" name="categoriaFrm1" id="3">
             <span>Mirim</span>
-            <input type="radio" name="categoriaFrm1" id="">
+            <input type="radio" name="categoriaFrm1" id="4">
             <span>Pré Mirim</span>
-            <input type="radio" name="categoriaFrm1" id="">
+            <input type="radio" name="categoriaFrm1" id="5">
           </div>
 
           <div class="etapa">
@@ -216,7 +225,7 @@
         </div>
         <!-- Encaminhamento para atletas aprovados -->
         <div class="col2 atlAprovados">
-          <p>Encaminhamento para atletas aprovados</p>
+          <p class="strong">Encaminhamento para atletas aprovados</p>
 
           <div>
             <h1>DPT° ADMINISTRAÇÃO</h1>
@@ -241,11 +250,16 @@
         <!-- 2° Parte do Formulário -->
         <div class="col2">
           <div class="topoForm2">
-            <h1>Centro de Treinamento</h1>
-            <span>Entrada:_____/_____/______</span>
+            <div>
+              <h1 class="strong">Centro de Treinamento</h1>
+              <span>Entrada:_____/_____/______</span>
+            </div>
+            <div>
+              <img src="./img/escudo.png" alt="">
+            </div>
           </div>
           <div class="topoForm2-1">
-            <h1>Vale das Laranjeiras</h1>
+            <h1 class="strong">Vale das Laranjeiras</h1>
             <span>Saída:_____/_____/______</span>
             <div class="col4">
               <input type="radio" name="situacao">
@@ -474,6 +488,11 @@
           _______________________________________________________________________________________________<br>
         </div>
       </div>
+    </div>
+    <div class="segBotao">
+      <a href="#" id="botao2"><img src="./img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
+        <p>Salvar em pdf / Imprimir</p>
+      </a>
     </div>
   </div>
 

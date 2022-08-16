@@ -24,7 +24,8 @@ body{
   display: grid;
   grid-template-columns: 1fr;    
   justify-items: center;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+  margin-top: 40px;
 }
 
 
@@ -69,9 +70,7 @@ body{
   font-weight: 600;
 }
 
-span {
-  font-size: 0.7rem;
-}
+
 
 .container {  
   width: 773px;
@@ -91,6 +90,10 @@ span {
   display: flex;
   justify-content: end;
   gap: 150px;
+}
+
+.linha1 > p{
+  font-size: 2rem;
 }
 
 .container-interno p {
@@ -276,7 +279,12 @@ span {
   body  {
     height: auto;
     visibility: hidden;
+    
   } 
+
+  span {
+    font-size: 0.7rem;
+  }
     #printable * {
     visibility: visible;
     
@@ -291,6 +299,9 @@ span {
     visibility: visible;
     page-break-before: always;
   }
+
+  
+
 }
 
 

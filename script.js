@@ -74,28 +74,21 @@ const selecRadioFrm1 = document.getElementsByName("categoriaFrm1");
 const selecRadioFrm2 = document.getElementsByName("categoriaFrm2");
 const etapaFrm1 = document.getElementsByName("etapaFrm1");
 const etapaFrm2 = document.getElementsByName("etapaFrm2");
-const vetorRadio = [
-  [selecRadioFrm1, selecRadioFrm2],
-  [etapaFrm1, etapaFrm2],
-];
+const vetorRadio = [[selecRadioFrm1, selecRadioFrm2], [etapaFrm1, etapaFrm2]];
 
 function clonarRadio([RadioFrm1, RadioFrm2]) {
-  RadioFrm1.forEach((_, index) => {
-    RadioFrm1[index].addEventListener("click", () => {
-      RadioFrm2[index].checked = RadioFrm1[index].checked;
+  RadioFrm1.forEach((_, index) => {    
+    RadioFrm1[index].addEventListener("click", () => {            
+       RadioFrm2[index].checked = RadioFrm1[index].checked;
     });
   });
 }
 
-for (const index in vetorRadio) {
-  //  console.log(index)
-     
-   clonarRadio([vetorRadio[index][0], vetorRadio[index][1]]);
-}
+ for (const index in vetorRadio) {
+     console.log(index)    
+    clonarRadio([vetorRadio[index][0], vetorRadio[index][1]]);
+ }
 
-//  vetorRadio.forEach(clonarRadio)
-
-// clonarRadio(selecRadioFrm1,selecRadioFrm2)
 
 const selBotao = document.getElementById("botao");
 const selBotao2 = document.getElementById("botao2");
@@ -108,6 +101,29 @@ botao.addEventListener("click", () => {
 chamarEvento(selBotao)
 chamarEvento(selBotao2)
 
+ //Selecionar necessidades, pé preferencial, deptMedico
 
-const testeVetor = [[[1,2],[3,4],[5,6],[7,8]], [[9,10],[11,12],[13,14],[15,16]]]
- console.log(testeVetor[1][3][1])
+ const necessidadesFrm = document.querySelectorAll('#necessidadesFrm1 input')
+ const pePreferencialFrm = document.querySelectorAll('#pePreferencialFrm1 input') 
+ const deptMedicoFrm1 = document.querySelectorAll('#deptMedicoFrm1 input')
+ 
+ const necessidadesFrmClone = document.querySelectorAll('#necessidadesFrm2 input') 
+ const pePreferencialFrmClone = document.querySelectorAll('#pePreferencialFrm2 input' ) 
+ const deptMedicoFrm2Clone = document.querySelectorAll('#deptMedFrm2 input')
+ 
+
+ const vetorNecessidades = [
+  [necessidadesFrm, necessidadesFrmClone],
+  [pePreferencialFrm, pePreferencialFrmClone],
+  [deptMedicoFrm1, deptMedicoFrm2Clone]
+]
+
+for (const index in vetorNecessidades) {  
+  clonarRadio([vetorNecessidades[index][0],vetorNecessidades[index][1], vetorNecessidades[index][2]])  
+}
+
+
+
+
+
+  

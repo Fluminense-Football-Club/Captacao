@@ -12,7 +12,6 @@ body{
 }
 
 
-
 .topoForm2 img{
   display: block;
   width: 32px;
@@ -265,14 +264,27 @@ body{
   text-align: center;
 }
 
-[disabled] {
-  color: black;
-}
+ [disabled]{
+  color: black;    
+} 
 
-/* @page {  
-  size: 1150px;
-   margin: 0;  
-} */
+
+[disabled]:checked{
+  -webkit-appearance: none;  
+  border-radius: 50%;
+  background-color: #0b77f3;
+  border-color: black;
+  width: 10px;
+  height: 10px;
+} 
+
+[disabled]:checked{
+  -webkit-appearance: none;  
+  border-radius: 50%;    
+  border-color: black;
+  width: 12px;
+  height: 12px;
+} 
 
 @media print {
 

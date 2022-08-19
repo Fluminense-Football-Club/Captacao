@@ -170,6 +170,10 @@ body{
   border: solid 2px black;
 }
 
+h1.strong,.mgEsc{  
+  margin-top: 15px;
+}
+
 .col2.atlAprovados h1 {
   font-size: 0.7rem;
 }

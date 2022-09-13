@@ -1,5 +1,5 @@
-@import url("./reset.css");
-@import url("./header.css");
+@import url("reset.css");
+@import url("components/css-components/style.css");
 
 body{
   height: 1600px;
@@ -51,7 +51,7 @@ body{
 
 .geral {  
   height: auto; /**/
-  width: 783px;
+  width: 783px;  
   margin: 0 auto;
   box-sizing: border-box;  
   margin-bottom: 100px;

@@ -1,25 +1,28 @@
+<?php 
+  //Template name: captacao
+?>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <link rel="stylesheet" href="./components/css-components/style.css">
-  <!-- <link rel="stylesheet" href="./style.css"> -->
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-  <script src="./components.js" type="module"></script>
+
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/style-ficha.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/templates/css/topo.css">
   
   <title>Ficha de Avaliação</title>
 </head>
 
 <body>
-  <?php get_header(); ?>
+  <?php get_template_part('./templates/header'); ?>
+
   <main class="dividirColunas">
   <div id="side" class="side"></div>
 
   <div class="geral">
     <div class="segBotao">
-      <a href="#" id="botao"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
+      <a href="#" id="botao"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
         <p>Salvar em pdf/ Imprimir</p>
       </a>
     </div>
@@ -34,7 +37,7 @@
         </div>
         <!-- Linha2 -->
         <div class="linha2">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/escudo.png" alt="">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/escudo.png" alt="">
           <h1>centro de treinamento vale das laranjeiras</h1>
           <p>saída : ___/___/______</p>
         </div>
@@ -251,7 +254,7 @@
             </div>
             <div>
               
-              <img class="mgEsc" src="<?php echo get_stylesheet_directory_uri(); ?>/img/escudo.png" alt="">
+              <img class="mgEsc" src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/escudo.png" alt="">
             </div>
           </div>
           <div class="topoForm2-1">
@@ -486,13 +489,13 @@
       </div>
     </div>
     <div class="segBotao">
-      <a href="#" id="botao2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
+      <a href="#" id="botao2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
         <p>Salvar em pdf / Imprimir</p>
       </a>
     </div>
   </div>
 </main>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/script.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/script-ficha.js"></script>
 
 </body>
 

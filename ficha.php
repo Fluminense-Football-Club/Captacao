@@ -20,20 +20,26 @@
   <main class="dividirColunas">
   <div id="side" class="side"></div>
 
-  <div class="geral">
-    <div class="segBotao">
+  <form class="geral" id="ficha_avaliacao" >
+    <div class="segBotao" onclick="">
       <a href="#" id="botao"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
         <p>Salvar em pdf/ Imprimir</p>
       </a>
     </div>
-
+    <button  onclick="salvar_ficha()">
+      Salvar ficha
+    </button>
 
     <div class="container" id="printable">
       <!-- Linha1 -->
       <div class="container-interno">
         <div class="linha1">
           <p class="strong">ficha de avaliação</p>
-          <span>N°____________</span>
+
+
+          <span>Nº <span id="numero_ficha">____________</span> </span>
+
+
         </div>
         <!-- Linha2 -->
         <div class="linha2">
@@ -50,9 +56,15 @@
 
         <!-- telefones formulário -->
         <div class="col3">
-          <input type="tel">
-          <input type="tel" name="tel">
-          <input type="tel" name="tel">
+
+
+
+          <input type="text" name="captador">
+          <input type="tel" name="telefone1">
+          <input type="tel" name="telefone2">
+
+
+
         </div>
 
         <!-- Categoria e Etapa -->
@@ -60,25 +72,31 @@
           <div class="categoria">
             <p>Categoria</p>
             <span>Junior</span>
-            <input type="radio" name="categoriaFrm1" id="1">
+            <input type="radio" name="categoriaFrm1" id="1" value="junior">
             <span>Juvenil</span>
-            <input type="radio" name="categoriaFrm1" id="2">
+            <input type="radio" name="categoriaFrm1" id="2" value="juvenil">
             <span>Infantil</span>
-            <input type="radio" name="categoriaFrm1" id="3">
+            <input type="radio" name="categoriaFrm1" id="3" value="infantil">
             <span>Mirim</span>
-            <input type="radio" name="categoriaFrm1" id="4">
+            <input type="radio" name="categoriaFrm1" id="4" value="mirim">
             <span>Pré Mirim</span>
-            <input type="radio" name="categoriaFrm1" id="5">
+            <input type="radio" name="categoriaFrm1" id="5" value="pre_mirim">
+
+
+
           </div>
 
           <div class="etapa">
             <p>Etapa</p>
             <span>Adaptação</span>
-            <input type="radio" name="etapaFrm1" id="">
+            <input type="radio" name="etapaFrm1" id="" value="adaptacao">
             <span>Gr.principal</span>
-            <input type="radio" name="etapaFrm1" id="">
+            <input type="radio" name="etapaFrm1" id="" value="grupo_principal">
             <span>Contratado</span>
-            <input type="radio" name="etapaFrm1" id="">
+            <input type="radio" name="etapaFrm1" id="" value="contratado">
+
+
+
           </div>
         </div>
 
@@ -86,35 +104,73 @@
         <div class="col2-1fr">
           <div class="nome">
             <p>nome completo do atleta</p>
-            <input type="text" id="nomeFrm1">
+
+
+
+            <input type="text" id="nomeFrm1" name="nome">
+
+
+
           </div>
           <div class="identidade">
             <p>identidade</p>
-            <input type="text" id="idtFrm1">
+
+
+            <input type="text" id="idtFrm1" name="identidade">
+
+
+
+
           </div>
         </div>
         <!-- Posição, Data de nascimento, Indicação -->
         <div class="col3">
           <div class="posicao">
             <p>Posição</p>
-            <input type="text" id="posFrm1">
+
+
+
+            <input type="text" id="posFrm1" name="posicao">
+
+
+
+
           </div>
           <div class="dt-nasc">
             <p>Data Nascimento</p>
-            <input type="text" id="dtNascFrm1">
+
+
+
+            <input type="text" id="dtNascFrm1" name="data_nascimento">
+
+
+
           </div>
 
           <div class="indicacao">
             <p>Indicação</p>
-            <input type="text" id="indFrm1">
+
+
+
+            <input type="text" id="indFrm1" name="indicacao_externa">
+
+
+
+
           </div>
         </div>
 
         <div class="col3">
           <div class="cidade">
-            <p>Cidade</p>
+            <p>Estados</p>
             <div class="col2-auto">
-              <select name="estados-brasil" id="estados-brasil">
+
+
+
+
+
+
+              <select name="estados_brasil" id="estados-brasil">
                 <option value=""> </option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
@@ -144,17 +200,34 @@
                 <option value="SE">Sergipe</option>
                 <option value="TO">Tocantins</option>
               </select>
+
+
+
+
+
               <input type="text" id="sg-estado">
 
             </div>
           </div>
           <div class="ultClube">
             <p>Último clube</p>
-            <input type="text" id="ultClubeFrm1">
+
+
+            <input type="text" id="ultClubeFrm1" name="ultimo_clube">
+
+
+
+
           </div>
           <div class="indFlu">
             <p>Ind. Fluminense</p>
-            <input type="text" id="indFluFrm1">
+
+
+            <input type="text" id="indFluFrm1" name="indicacao_interna">
+
+
+
+
           </div>
         </div>
 
@@ -162,40 +235,54 @@
         <div class="col2">
           <div class="col6" id="necessidadesFrm1">
             <p>necessidades</p>
-            <input type="checkbox">
-            <label for="almoxarifado">Almox</label>
+            <input type="checkbox" name="necessidade_alimentacao" id="alimentacao">
+            <label for="alimentacao">Alimentação</label>
 
-            <input type="checkbox">
-            <label for="almoxarifado">Alojamento</label>
+            <input type="checkbox" name="necessidade_alojamento" id="alojamento">
+            <label for="alojamento">Alojamento</label>
 
-            <input type="checkbox">
-            <label for="almoxarifado">Transporte</label>
+            <input type="checkbox" name="necessidade_transporte" id="transporte">
+            <label for="transporte">Transporte</label>
           </div>
 
           <div class="col6" id="pePreferencialFrm1">
-            <p>Pé preferencial</p>
-            <input type="checkbox">
-            <label for="almoxarifado">Destro</label>
+            <p>Lateralidade</p>
 
-            <input type="checkbox">
-            <label for="almoxarifado">Canhoto</label>
+            <input type="radio" name="lateralidade" id="destro" value="destro">
+            <label for="destro">Destro</label>
 
-            <input type="checkbox">
-            <label for="almoxarifado">Ambidestro</label>
+            <input type="radio" name="lateralidade" id="canhoto" value="canhoto">
+            <label for="canhoto">Canhoto</label>
+
+            <input type="radio" name="lateralidade" id="ambidestro" value="ambidestro">
+            <label for="ambidestro">Ambidestro</label>
+
+
+
+
           </div>
         </div>
         <!-- Dept. Médico / Dept. Fisiologia -->
         <div class="col2">
           <div class="col4" id="deptMedicoFrm1">
+
+
             <p>dept. médico</p>
-            <input type="radio" name="deptMedico">
+            <input type="radio" name="departamento_medico" value="apto">
+
+
             <span>Apto</span>
-            <input type="radio" name="deptMedico">
+            <input type="radio" name="departamento_medico" value="nao_apto">
+
+
             <span><span>não</span> apto</span>
             <p>Atestado Médico</p>
-            <input type="radio" name="atestMedico">
+            <input type="radio" name="atestado_medico" value="sim">
             <span>Sim</span>
-            <input type="radio" name="atestMedico">
+            <input type="radio" name="atestado_medico" value="nao">
+
+
+
             <span>Não</span>
             <p>______________________________________</p>
             <span class="assinatura">Assinatura do médico responsável</span>
@@ -261,9 +348,9 @@
             <h1 class="strong">Vale das Laranjeiras</h1>
             <span>Saída:_____/_____/______</span>
             <div class="col4">
-              <input type="radio" name="situacao">
+          <input type="radio" name="situacao" value="aprovado">
               <span>APROVADO</span>
-              <input type="radio" name="situacao">
+          <input type="radio" name="situacao" value="dispensado">
               <span>DISPENSADO</span>
             </div>
           </div>
@@ -357,13 +444,13 @@
 
           <div class="col6" id="pePreferencialFrm2">
             <p>Pé preferencial</p>
-            <input type="checkbox" disabled>
+            <input type="radio"  name="lateralidadeFrm2" disabled>
             <label for="almoxarifado">Destro</label>
 
-            <input type="checkbox" disabled>
+            <input type="radio" name="lateralidadeFrm2" disabled>
             <label for="almoxarifado">Canhoto</label>
 
-            <input type="checkbox" disabled>
+            <input type="radio" name="lateralidadeFrm2" disabled>
             <label for="almoxarifado">Ambidestro</label>
           </div>
         </div>
@@ -408,63 +495,63 @@
         <div class="col4-fr">
           <p>conceito das características técnicas do atleta</p>
           <div class="col2-auto">
-            <div class="col2-auto border">
+            <div class="col2-auto border" id="componentes_tecnicos">
               <p class="border">Componentes técnicos</p>
               <span>Cabeceio</span>
-              <input type="checkbox" name="" id="">
+              <input type="text" name="cabeceio" id="">
               <span>Chute</span>
-              <input type="checkbox" name="" id="">
+              <input type="text" name="chute" id="">
               <span>Cruzamento</span>
-              <input type="checkbox" name="" id="">
+              <input type="text" name="cruzamento" id="">
               <span>Passe</span>
-              <input type="checkbox" name="" id="">
+              <input type="text" name="passe" id="">
               <span>Recepção</span>
-              <input type="checkbox" name="" id="">
+              <input type="text" name="recepcao" id="">
               <span>Drible</span>
-              <input type="checkbox" name="" id="">
+              <input type="text" name="drible" id="">
             </div>
 
             <div class="col2-auto">
-              <div class="col2-auto border">
+              <div class="col2-auto border" id="componentes_taticos">
                 <p class="border">Componentes táticos</p>
                 <span>Marcação</span>
-                <input type="checkbox" name="" id="">
+                <input type="text" name="marcacao" id="">
                 <span>Deslocamento</span>
-                <input type="checkbox" name="" id="">
+                <input type="text" name="deslocamento" id="">
                 <span>Posicionamento</span>
-                <input type="checkbox" name="" id="">
+                <input type="text" name="posicionamento" id="">
                 <span>Reposição</span>
-                <input type="checkbox" name="" id="">
+                <input type="text" name="reposicao" id="">
                 <span>Percepção</span>
-                <input type="checkbox" name="" id="">
+                <input type="text" name="percepcao" id="">
               </div>
 
-              <div class="border">
+              <div class="border" id="fundamentos_goleiros">
                 <p class="border">Fundamentos Goleiros</p>
                 <div class="col2 border">
                   <div class="col2-auto">
                     <span>Agilidade</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="agilidade" id="">
                     <span>Reflexo</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="reflexo" id="">
                     <span>Firmeza Pegada</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="firmeza_pegada" id="">
                     <span>Defesa Bola Alta</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="defesa_bola_alta" id="">
                     <span>Defesa Bola Baixa</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="defesa_bola_baixa" id="">
                   </div>
 
 
                   <div class="col2-auto">
                     <span>Reposição c/Mão</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="reposicao_mao" id="">
                     <span>Reposição c/Pé</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="reposicao_pe" id="">
                     <span>Saída Bola Aérea</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="saida_bola_aerea" id="">
                     <span>Saída Bola Baixa</span>
-                    <input type="checkbox" name="" id="">
+                    <input type="text" name="saida_bola_baixa" id="">
                   </div>
                 </div>
               </div>
@@ -493,7 +580,7 @@
         <p>Salvar em pdf / Imprimir</p>
       </a>
     </div>
-  </div>
+  </form>
 </main>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/script-ficha.js"></script>
 

@@ -1,0 +1,16 @@
+.graficos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+.fullColum{
+    grid-column: 1/-1;
+    height: 600px;
+}
+.standardLine{
+    height: 600px;
+}
+iframe{
+    height: 100%;
+    width: 100%;
+    display: block;
+}

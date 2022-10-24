@@ -8,88 +8,77 @@ Version: 1.0
 @import url("css/reset.css");
 @import url("css/topo.css");
 
-body{
-  height: 1600px;
+body {
+  height: 1600px;  
 }
 
-
-.topoForm2{
+.topoForm2 {
   display: grid;
-  grid-template-columns: 1fr auto;  
+  grid-template-columns: 1fr auto;
   justify-items: end;
 }
 
-
-.topoForm2 img{
+.topoForm2 img {
   display: block;
   width: 32px;
   height: 32px;
-  
 }
 
-.segBotao{
+.segBotao {
   display: grid;
-  grid-template-columns: 1fr;    
+  grid-template-columns: 1fr;
   justify-items: center;
   padding-bottom: 60px;
   margin-top: 40px;
 }
 
-
-#botao, #botao2 {
+#botao,
+#botao2 {
   display: grid;
   gap: 10px;
   align-items: center;
   grid-template-columns: auto 1fr;
-  text-decoration: none;  
-  font-weight: 600;    
+  text-decoration: none;
+  font-weight: 600;
   text-transform: uppercase;
   color: rgb(233, 223, 223);
   padding: 1rem 2rem;
   background-color: rgb(8, 145, 65);
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 
 /* #botao,#botao2:hover{
   background-color: rgb(70, 160, 108);
 } */
 
-
-
-
-.geral {  
+.geral {
   height: auto; /**/
-  width: 783px;  
+  width: 783px;
   margin: 0 auto;
-  box-sizing: border-box;  
+  box-sizing: border-box;
   margin-bottom: 100px;
   margin-top: 100px;
-  
 }
-
-
 
 .border {
   border: 1px solid black;
 }
 
-.strong{
+.strong {
   font-weight: 600;
 }
 
-
-
-.container {  
+.container {
   width: 773px;
-  height: auto;  
+  height: auto;
   margin: 0px auto;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 .container-interno {
   width: 720px;
   height: auto;
-  margin: 0 auto;  
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
@@ -99,7 +88,7 @@ body{
   gap: 150px;
 }
 
-.linha1 > p{
+.linha1 > p {
   font-size: 2rem;
 }
 
@@ -178,7 +167,8 @@ body{
   border: solid 2px black;
 }
 
-h1.strong,.mgEsc{  
+h1.strong,
+.mgEsc {
   margin-top: 15px;
 }
 
@@ -276,51 +266,39 @@ h1.strong,.mgEsc{
   text-align: center;
 }
 
- [disabled]{
-  color: black;    
-} 
+[disabled] {
+  color: black;
+}
 
-
-[disabled]:checked{
-  -webkit-appearance: none;  
+[disabled]:checked {
+  -webkit-appearance: none;
   border-radius: 50%;
-  box-shadow:  inset 0 0 0 1px white, inset 0 0 0 6px #0b77f3;    
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 6px #0b77f3;
   border-color: #0b77f3;
   width: 12px;
   height: 12px;
-} 
-
-
+}
 
 @media print {
-
-  body  {
+  body {
     height: auto;
     visibility: hidden;
-    
-  } 
+  }
 
   span {
     font-size: 0.7rem;
   }
-    #printable * {
+  #printable * {
     visibility: visible;
-    
   }
-  #printable {    
+  #printable {
     position: absolute;
     left: 0;
-    top: 0;        
+    top: 0;
   }
 
-  .teste{
+  .teste {
     visibility: visible;
     page-break-before: always;
   }
-
-  
-
 }
-
-
-

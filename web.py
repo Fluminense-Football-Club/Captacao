@@ -4,11 +4,11 @@ from SGF.dependencias_bancos import BD
 from flask import request
 import numpy 
 
-class SalvarFicha:
+class web_content:
     def __init__(self) -> None:
         pass
 
-    def send(self):
+    def save_ficha(self):
         form = request.form
 
         ficha_avaliacao = BD('ficha_entrada')
@@ -224,3 +224,42 @@ class SalvarFicha:
         'fundamentos_goleiros':fundamentos_goleiros,
         }
         return dados_ficha
+
+    def get_data(self):
+        ficha_avaliacao = BD('ficha_entrada')
+        fichas = ficha_avaliacao.visualizar()
+        ficha_avaliacao.finalizar()
+
+        json_list = []
+        for ficha in fichas:
+            dados_ficha= {
+            'numero_ficha':ficha[0],
+            'id':ficha[1],
+            'nome':ficha[2],
+            'identidade':ficha[3],
+            'data_nascimento':ficha[4],
+            'telefone1':ficha[5],
+            'telefone2':ficha[6],
+            'estado_origem':ficha[7],
+            'lateralidade':ficha[8],
+            'categoria':ficha[9],
+            'posicao':ficha[10],
+            'etapa':ficha[11],
+            'situacao':ficha[12],
+            'captador':ficha[13],
+            'indicacao_externa':ficha[14],
+            'indicacao_interna':ficha[15],
+            'ultimo_clube':ficha[16],
+            'departamento_medico':ficha[17],
+            'atestado_medico':ficha[18],
+            'necessidade_alojamento':ficha[19],
+            'necessidade_transporte':ficha[20],
+            'necessidade_alimentacao':ficha[21],
+            'componentes_tecnicos':ficha[22],
+            'componentes_taticos':ficha[23],
+            'fundamentos_goleiros':ficha[24],
+            }
+            json_list.append(dados_ficha)
+
+        json_dict = {'fichas':json_list}
+        return json_dict

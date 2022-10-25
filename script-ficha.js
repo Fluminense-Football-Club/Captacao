@@ -1,9 +1,34 @@
-// Selecionando os dois campos capital e siglas frm1
-const frm1_Select_cid = document.getElementById("estados-brasil");
-const sg = document.querySelector("#sg-estado");
-const frm2_Select_cid = document.getElementById("frm2_Select_cid");
-const frm2_Select_cid_abrev = document.getElementById("frm2_Select_cid_abrev");
+function salvar_ficha(){
+  var url = "http://localhost:8001/captacao/salvar_ficha";
+ 
+  componentes_tecnicos = Array.from(document.querySelectorAll('#componentes_tecnicos input'))
+  .map((x)=>{ if (x.value === ''){return `${x.name}=${null}`} else{return `${x.name}=${x.value }`}})
+  componentes_tecnicos = componentes_tecnicos.join('|')
+  
+  componentes_taticos = Array.from(document.querySelectorAll('#componentes_taticos input'))
+  .map((x)=>{ if (x.value === ''){return `${x.name}=${null}`} else{return `${x.name}=${x.value }`}})
+  componentes_taticos = componentes_taticos.join('|')
 
+  fundamentos_goleiros = Array.from(document.querySelectorAll('#fundamentos_goleiros input'))
+  .map((x)=>{ if (x.value === ''){return `${x.name}=${null}`} else{return `${x.name}=${x.value }`}})
+  fundamentos_goleiros =  fundamentos_goleiros.join('|')
+   
+   
+
+  var form = new FormData(document.getElementById("ficha_avaliacao"));
+  form.append("componentes_tecnicos", componentes_tecnicos);
+  form.append("componentes_taticos", componentes_taticos);
+  form.append("fundamentos_goleiros", fundamentos_goleiros);
+
+  fetch(url, {
+    method: "POST",
+    body: form,
+  })
+    .then((response) => response.json())
+    // .then(function () {
+      
+    // });
+}
 function clonarCidade(selCid, siglaEstadoFrm1, siglaEstadoFrm2, cloneForm2) {
   selCid.addEventListener("click", () => {
     Array.from(selCid).forEach((item) => {
@@ -15,6 +40,14 @@ function clonarCidade(selCid, siglaEstadoFrm1, siglaEstadoFrm2, cloneForm2) {
     });
   });
 }
+
+
+
+// Selecionando os dois campos capital e siglas frm1
+const frm1_Select_cid = document.getElementById("estados-brasil");
+const sg = document.querySelector("#sg-estado");
+const frm2_Select_cid = document.getElementById("frm2_Select_cid");
+const frm2_Select_cid_abrev = document.getElementById("frm2_Select_cid_abrev");
 //Selecionar campos a copiar
 const nomeAtletaFrm1 = document.getElementById("nomeFrm1");
 const identidadeFrm1 = document.getElementById("idtFrm1");
@@ -84,8 +117,7 @@ function clonarRadio([RadioFrm1, RadioFrm2]) {
   });
 }
 
- for (const index in vetorRadio) {
-     console.log(index)    
+ for (const index in vetorRadio) {   
     clonarRadio([vetorRadio[index][0], vetorRadio[index][1]]);
  }
 
@@ -123,7 +155,10 @@ for (const index in vetorNecessidades) {
 }
 
 
-
+document.getElementById("ficha_avaliacao").addEventListener("submit", (event) => {
+  console.log(event)
+  event.preventDefault();
+});
 
 
   

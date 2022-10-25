@@ -10,20 +10,17 @@
         
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/css/graficos.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/templates/css/topo.css">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
-    <!-- <link rel="stylesheet" href="../components/css-components/style.css"> -->
-    <!-- <link rel="stylesheet" href="../css/graficos.css"> -->
-    <script src="../src/components.js" type="module"></script>
-    <script src="../src/graficos.js"></script>
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/style-ficha.css">
+    
+    <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/graficos.js"></script>
 </head>
 <body>
-    <div id="topo">
-    </div>
+
+    <?php get_template_part('./templates/header'); ?>
+
     <main class="dividirColunas">
 
-        <div id="side" class="side">
-        </div>
-    
+
         <div id="graficos" class="graficos">
             <div id="aprovados" class="standardLine"></div>
             <div id="aprovados_estado" class="standardLine"></div>

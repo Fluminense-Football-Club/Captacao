@@ -1,6 +1,6 @@
 
 
-var url = "http://localhost:8080/cgi-bin/gerar_graficos.py";
+var url = "http://localhost:8001/captacao/graficos";
 
 var myHeaders = new Headers();
 var myInit = {

@@ -18,7 +18,6 @@
   <?php get_template_part('./templates/header'); ?>
 
   <main class="dividirColunas">
-  <div id="side" class="side"></div>
 
   <form class="geral" id="ficha_avaliacao" >
     <div class="segBotao" onclick="">

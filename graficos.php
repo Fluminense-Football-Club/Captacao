@@ -19,17 +19,13 @@
     <?php get_template_part('./templates/header'); ?>
 
     <main class="dividirColunas">
-
-
         <div id="graficos" class="graficos">
             <div id="aprovados" class="standardLine"></div>
             <div id="aprovados_estado" class="standardLine"></div>
             <div id="aprovados_posicao" class="fullColum"></div>
             <div id="captador_aprovados" class="fullColum"></div>
-        </div>
-        
-        
+        </div>        
     </main>
-   
+
 </body>
 </html>

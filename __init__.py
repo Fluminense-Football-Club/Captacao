@@ -5,7 +5,7 @@ from flask_cors import cross_origin
 from flask import Flask
 
 
-class app_captacao:
+class AppCaptacao:
     
     def __init__(self):
         app = Flask(__name__)
@@ -33,4 +33,4 @@ class app_captacao:
         http_server.serve_forever()
 
 if __name__ == "__main__":
-    app_captacao()
+    AppCaptacao()

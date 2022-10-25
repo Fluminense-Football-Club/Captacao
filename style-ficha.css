@@ -302,3 +302,13 @@ h1.strong,
     page-break-before: always;
   }
 }
+
+
+
+/*Dividindo todo o site*/
+
+.dividirColunas {
+  display: grid;
+  margin-top: 200px;  
+  grid-template-columns: 1fr;
+}

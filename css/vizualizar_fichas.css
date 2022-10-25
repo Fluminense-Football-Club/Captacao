@@ -1,0 +1,20 @@
+.fichas_view{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+#bloco_fichas{
+    justify-self: center;
+    width: 70%;
+}
+
+.img_ficha{    
+    justify-self: right;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

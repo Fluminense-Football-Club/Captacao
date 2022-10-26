@@ -15,7 +15,7 @@
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/graficos.js"></script>
 </head>
 <body>
-
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <?php get_template_part('./templates/header'); ?>
 
     <main class="dividirColunas">
@@ -26,6 +26,12 @@
             <div id="captador_aprovados" class="fullColum"></div>
         </div>        
     </main>
-
+    <?php endwhile; else: ?>
+  <section class="container sobre">
+   <div class="grid-8">
+    <p>Essa página não exite</p>
+   </div>
+  </section>
+ <?php endif; ?>
 </body>
 </html>

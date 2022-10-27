@@ -8,8 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/style-ficha.css">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/templates/css/topo.css">
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/css/ficha/style-ficha.css">
   
   <title>Ficha de Avaliação</title>
 </head>
@@ -581,7 +580,7 @@
     </div>
   </form>
 </main>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/script-ficha.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/ficha.js"></script>
 
 </body>
 

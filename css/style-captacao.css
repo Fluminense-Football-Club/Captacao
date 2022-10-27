@@ -1,0 +1,17 @@
+@import url("../../style.css");
+
+
+
+body {
+    height: 1600px;  
+}
+
+
+
+/*Dividindo todo o site*/
+
+.dividirColunas {
+    display: grid;
+    margin-top: 200px;  
+    grid-template-columns: 1fr;
+  }

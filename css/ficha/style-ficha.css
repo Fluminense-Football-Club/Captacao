@@ -5,12 +5,7 @@ Description: Modelo de ficha utilizado pelo setor de captação
 Version: 1.0
 */
 
-@import url("css/reset.css");
-
-
-body {
-  height: 1600px;  
-}
+@import url('../style-captacao.css');
 
 .topoForm2 {
   display: grid;
@@ -304,11 +299,3 @@ h1.strong,
 }
 
 
-
-/*Dividindo todo o site*/
-
-.dividirColunas {
-  display: grid;
-  margin-top: 200px;  
-  grid-template-columns: 1fr;
-}

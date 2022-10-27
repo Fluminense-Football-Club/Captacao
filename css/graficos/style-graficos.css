@@ -1,3 +1,6 @@
+@import url('../style-captacao.css');
+
+
 .graficos{
     display: grid;
     grid-template-columns: 1fr 1fr;  

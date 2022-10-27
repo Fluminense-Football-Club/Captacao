@@ -4,7 +4,6 @@
 .graficos{
     display: grid;
     grid-template-columns: 1fr 1fr;  
-    margin-top: 200px;  
 }
 .fullColum{
     grid-column: 1/-1;

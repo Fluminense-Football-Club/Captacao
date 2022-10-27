@@ -14,16 +14,15 @@
 </head>
 <body>
 
-    <!-- <?php get_template_part('./templates/header'); ?> -->
+    <?php get_template_part('./templates/header'); ?>
     <?php get_template_part('./Captacao/modal', 'ficha'); ?>
 
     <main class="dividirColunas">
       
-      <!-- <button type="button" onclick="openModal()">Cadastrar Atleta</button> -->
 
       <div id="bloco_fichas">
         
-        <div class="fichas_view" onclick="openModal()">
+        <div class="fichas_view" id='id1'onclick="Preview_ficha(id1)">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
           <div class="info">  
             <span>Ficha nº:1</span>
@@ -38,7 +37,7 @@
         </div>
 
 
-        <div class="fichas_view" onclick="openModal()">
+        <div class="fichas_view" id='id2'onclick="Preview_ficha(id2)">
           
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
           <div class="info">  
@@ -53,7 +52,7 @@
           </div>
         </div>
 
-        <div class="fichas_view" onclick="openModal()">
+        <div class="fichas_view" id='id1'onclick="Preview_ficha(id1)">
           
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
           <div class="info">  

@@ -3,24 +3,27 @@
 ?>
 <html lang="pt_BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizar Fichas</title>   
-        
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/css/visualizar_fichas/style-visualizar_fichas.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizar Fichas</title>   
+  
+  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/css/visualizar_fichas/style-visualizar_fichas.css">
 
     
 </head>
 <body>
 
-    <?php get_template_part('./templates/header'); ?>
+    <!-- <?php get_template_part('./templates/header'); ?> -->
     <?php get_template_part('./Captacao/modal', 'ficha'); ?>
 
     <main class="dividirColunas">
+      
+      <!-- <button type="button" onclick="openModal()">Cadastrar Atleta</button> -->
+
       <div id="bloco_fichas">
         
-        <div class="fichas_view">
+        <div class="fichas_view" onclick="openModal()">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
           <div class="info">  
             <span>Ficha nº:1</span>
@@ -35,7 +38,7 @@
         </div>
 
 
-        <div class="fichas_view">
+        <div class="fichas_view" onclick="openModal()">
           
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
           <div class="info">  
@@ -50,7 +53,7 @@
           </div>
         </div>
 
-        <div class="fichas_view">
+        <div class="fichas_view" onclick="openModal()">
           
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
           <div class="info">  

@@ -1,4 +1,7 @@
+@import url('../ficha/style-ficha.css');
 @import url('../style-captacao.css');
+
+@import url('./modal-fichas.css');
 
 .fichas_view{
     display: grid;

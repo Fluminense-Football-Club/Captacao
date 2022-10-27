@@ -59,15 +59,13 @@ function Destribuir_valores(element){
 }
 
 function Montar_Tabela(dados){
-    
-  
-  
-
   contador = 0
   dados["fichas"].forEach((element)=>{
     let ficha = document.createElement('div')
     ficha.className = 'fichas_view'
-    
+    ficha.id = 'ficha'+element.numero_ficha
+    ficha.objeto_ficha = element
+    ficha.setAttribute("onclick", `Preview_ficha(${ficha.id})`);
     let img_ficha = document.createElement('img')
     img_ficha.src = directory_uri + '/Captacao/img/ficha.png'
     img_ficha.className = 'img_ficha'
@@ -86,7 +84,46 @@ function Montar_Tabela(dados){
   })
   
 }
+function Preview_ficha(ficha){
+  openModal()
+  var url = "http://sgf.local/anagrama8904/";
 
+  var myHeaders = new Headers();
+
+  var myInit = {
+    method: "GET",
+    headers: myHeaders,
+    mode: "cors",
+    cache: "default",
+  };
+  var myRequest = new Request(url, myInit);
+
+  let content_preview = document.getElementById('content_preview')
+  
+  fetch(myRequest)
+  .then(function (response) {
+    return response.text();
+  }).then((pagina)=>{
+    content_preview.innerHTML += pagina 
+  })    
+   
+  // Object.keys(ficha.objeto_ficha).forEach((key)=>{
+  //   content_preview.innerHTML += key + ': '
+  //   content_preview.innerHTML += ficha.objeto_ficha[key]
+  //   content_preview.innerHTML += '<br>'
+  // })
+  
+
+}
+
+function openModal() {
+  document.getElementById("modal").classList.add("active"); 
+
+}
+
+const closeModal = () => document.getElementById("modal").classList.remove("active");
+
+document.querySelectorAll(".modalClose").forEach((element, index) => { element.addEventListener("click", closeModal); });
 
 const directory_uri = '../../wp-content/themes/sgf'
 const bloco_fichas = document.getElementById('bloco_fichas')

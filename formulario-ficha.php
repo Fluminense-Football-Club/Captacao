@@ -2,9 +2,7 @@
   //Template name: ficha
 ?>
 <form class="geral" id="ficha_avaliacao" >
-  <button  onclick="salvar_ficha()">
-    Salvar ficha
-  </button>
+  
   <div class="container" id="printable">
     <!-- Linha1 -->
     <div class="container-interno">

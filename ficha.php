@@ -27,7 +27,9 @@
       <p>Salvar em pdf/ Imprimir</p>
     </a>
   </div>
-  
+  <button  onclick="salvar_ficha()">
+    Salvar ficha
+  </button>
     <?php get_template_part('./Captacao/formulario', 'ficha'); ?>
     
   <div class="segBotao">

@@ -15,6 +15,8 @@
 <body>
 
     <?php get_template_part('./templates/header'); ?>
+    <?php get_template_part('./templates/side', 'captacao'); ?>
+
     <?php get_template_part('./Captacao/modal', 'ficha'); ?>
 
     <main class="dividirColunas">

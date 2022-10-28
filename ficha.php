@@ -16,6 +16,8 @@
 <body>
   
   <?php get_template_part('./templates/header'); ?>
+  <?php get_template_part('./templates/side', 'captacao'); ?>
+
 
   <main class="dividirColunas">
   <div class="segBotao" onclick="">

@@ -23,7 +23,7 @@
 
   <main class="dividirColunas">
   <div class="segBotao" onclick="">
-    <a href="#" id="botao"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
+    <a href="#" id="botao"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
       <p>Salvar em pdf/ Imprimir</p>
     </a>
   </div>
@@ -33,7 +33,7 @@
     <?php get_template_part('./Captacao/formulario', 'ficha'); ?>
     
   <div class="segBotao">
-    <a href="#" id="botao2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
+    <a href="#" id="botao2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
       <p>Salvar em pdf / Imprimir</p>
     </a>
   </div>

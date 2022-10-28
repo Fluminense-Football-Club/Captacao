@@ -67,7 +67,7 @@ function Montar_Tabela(dados){
     ficha.objeto_ficha = element
     ficha.setAttribute("onclick", `Preview_ficha(${ficha.id})`);
     let img_ficha = document.createElement('img')
-    img_ficha.src = directory_uri + '/Captacao/img/ficha.png'
+    img_ficha.src = directory_uri + '/Captacao/assets/ficha.png'
     img_ficha.className = 'img_ficha'
     
     if (contador >= 10){

@@ -18,7 +18,7 @@
       </div>
       <!-- Linha2 -->
       <div class="linha2">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/escudo.png" alt="">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/escudo.png" alt="">
         <h1>centro de treinamento vale das laranjeiras</h1>
         <p>saída : ___/___/______</p>
       </div>
@@ -316,7 +316,7 @@
           </div>
           <div>
             
-            <img class="mgEsc" src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/escudo.png" alt="">
+            <img class="mgEsc" src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/escudo.png" alt="">
           </div>
         </div>
         <div class="topoForm2-1">

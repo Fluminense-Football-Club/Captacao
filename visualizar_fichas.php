@@ -25,7 +25,7 @@
       <div id="bloco_fichas">
         
         <div class="fichas_view" id='id1'onclick="Preview_ficha(id1)">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/ficha.png" alt="" class="img_ficha">         
           <div class="info">  
             <span>Ficha nº:1</span>
             <span>Nome: Juca</span>
@@ -41,7 +41,7 @@
 
         <div class="fichas_view" id='id2'onclick="Preview_ficha(id2)">
           
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/ficha.png" alt="" class="img_ficha">         
           <div class="info">  
             <span>Ficha nº:2</span>
             <span>Nome: Juca</span>
@@ -56,7 +56,7 @@
 
         <div class="fichas_view" id='id1'onclick="Preview_ficha(id1)">
           
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/img/ficha.png" alt="" class="img_ficha">         
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/ficha.png" alt="" class="img_ficha">         
           <div class="info">  
             <span>Ficha nº:3</span>
             <span>Nome: Juca</span>

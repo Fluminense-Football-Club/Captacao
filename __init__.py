@@ -1,5 +1,5 @@
 from SGF.Captacao.gerar_graficos import GraficosCaptacao
-from web import web_content
+from SGF.Captacao.web import web_content
 from gevent.pywsgi import WSGIServer
 from flask_cors import cross_origin
 from flask import Flask

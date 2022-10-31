@@ -30,7 +30,7 @@
       </a>    
     </div>
     <div class="botaoSalvar btn btn-warning">
-      <a href="#" onclick="salvar_ficha()">
+      <a href="#" id='save_ficha'>
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
         <p>Salvar ficha</p>
       </a href="#">
@@ -54,7 +54,7 @@
   </div>
 </section>
   </main>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/ficha.js"></script>
+  <script type='module' src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/ficha.js"></script>
 
 </body>
 

@@ -27,7 +27,7 @@
       <p>Salvar em pdf/ Imprimir</p>
     </a>
   </div>
-  <button  onclick="salvar_ficha()">
+  <button  id='save_ficha'>
     Salvar ficha
   </button>
     <?php get_template_part('./Captacao/formulario', 'ficha'); ?>
@@ -39,7 +39,7 @@
   </div>
 
   </main>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/ficha.js"></script>
+  <script type='module' src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/ficha.js"></script>
 
 </body>
 

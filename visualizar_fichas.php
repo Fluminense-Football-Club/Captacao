@@ -76,7 +76,7 @@
 
     </main>
     
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/visualizar_fichas.js"></script>
+    <script type="module" src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/visualizar_fichas.js"></script>
    
 </body>
 </html>

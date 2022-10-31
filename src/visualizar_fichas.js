@@ -1,4 +1,5 @@
 function Coletar_fichas() {
+  // Coletar dados
   var url = "http://localhost:8001/captacao/get_data";
 
   var myHeaders = new Headers();
@@ -17,6 +18,29 @@ function Coletar_fichas() {
     })
     .then(function (dados) {
       return Montar_Tabela(dados);
+    });
+
+  // Coletar página
+  var url = "http://sgf.local/anagrama8904/";
+
+  var myHeaders = new Headers();
+
+  var myInit = {
+    method: "GET",
+    headers: myHeaders,
+    mode: "cors",
+    cache: "default",
+  };
+  var myRequest = new Request(url, myInit);
+
+  let content_preview = document.getElementById("content_preview");
+
+  fetch(myRequest)
+    .then(function (response) {
+      return response.text();
+    })
+    .then((pagina) => {
+      content_preview.innerHTML += pagina;
     });
 }
 
@@ -83,164 +107,113 @@ function Montar_Tabela(dados) {
 }
 function Preview_ficha(ficha) {
   openModal();
-  var url = "http://sgf.local/anagrama8904/";
 
-  var myHeaders = new Headers();
+  let dados = ficha.objeto_ficha;
 
-  var myInit = {
-    method: "GET",
-    headers: myHeaders,
-    mode: "cors",
-    cache: "default",
-  };
-  var myRequest = new Request(url, myInit);
+  document.getElementById("numero_ficha").innerText = dados.numero_ficha;
 
-  let content_preview = document.getElementById("content_preview");
+  document.getElementById("necessidade_alimentacao").checked =
+    dados.necessidade_alimentacao;
+  document.getElementById("necessidade_alojamento").checked =
+    dados.necessidade_alojamento;
+  document.getElementById("necessidade_transporte").checked =
+    dados.necessidade_transporte;
 
-  fetch(myRequest)
-    .then(function (response) {
-      return response.text();
-    })
-    .then((pagina) => {
-      content_preview.innerHTML += pagina;
-    })
-    .finally(() => {
-      aux = "nao";
-      switch (aux) {
-        case "sim":
-          document.getElementById("atestado_medico_sim").checked = true;
-          break;
-        case "nao":
-          document.getElementById("atestado_medico_nao").checked = true;
-          break;
-      }
+  document.getElementById("captador").value = dados.captador;
+  document.getElementById("data_nascimento").value = dados.data_nascimento;
+  document.getElementById("estado_origem").value = dados.estado_origem;
+  document.getElementById("identidade").value = dados.identidade;
+  document.getElementById("indicacao_externa").value = dados.indicacao_externa;
+  document.getElementById("indicacao_interna").value = dados.indicacao_interna;
+  document.getElementById("nome").value = dados.nome;
+  document.getElementById("posicao").value = dados.posicao;
+  document.getElementById("telefone1").value = dados.telefone1;
+  document.getElementById("telefone2").value = dados.telefone2;
+  document.getElementById("ultimo_clube").value = dados.ultimo_clube;
+  
+  switch (dados.atestado_medico) {
+    case "sim":
+      document.getElementById("atestado_medico_sim").checked = true;
+      break;
+    case "nao":
+      document.getElementById("atestado_medico_nao").checked = true;
+      break;
+  }
 
-      aux = "captador";
-      document.getElementById("captador").value = aux;
+  switch (dados.categoria) {
+    case "junior":
+      document.getElementById("categoria_junior").checked = true;
+      break;
+    case "juvenil":
+      document.getElementById("categoria_juvenil").checked = true;
+      break;
+    case "infantil":
+      document.getElementById("categoria_infantil").checked = true;
+      break;
+    case "mirim":
+      document.getElementById("categoria_mirim").checked = true;
+      break;
+    case "pre_mirim":
+      document.getElementById("categoria_pre_mirim").checked = true;
+      break;
+  }
 
-      aux = "infantil";
-      switch (aux) {
-        case "junior":
-          document.getElementById("categoria_junior").checked = true;
-          break;
-        case "juvenil":
-          document.getElementById("categoria_juvenil").checked = true;
-          break;
-        case "infantil":
-          document.getElementById("categoria_infantil").checked = true;
-          break;
-        case "mirim":
-          document.getElementById("categoria_mirim").checked = true;
-          break;
-        case "pre_mirim":
-          document.getElementById("categoria_pre_mirim").checked = true;
-          break;
-      }
+  switch (dados.departamento_medico) {
+    case "apto":
+      document.getElementById("departamento_medico_apto").checked = true;
+      break;
+    case "nao_apto":
+      document.getElementById("departamento_medico_nao_apto").checked = true;
+      break;
+  }
 
-      aux = "23/04/22";
-      document.getElementById("data_nascimento").value = aux;
+  switch (dados.etapa) {
+    case "adaptacao":
+      document.getElementById("etapa_adaptacao").checked = true;
+      break;
+    case "grupo principal":
+      document.getElementById("etapa_grupo_principal").checked = true;
+      break;
+    case "contratado":
+      document.getElementById("etapa_contratado").checked = true;
+      break;
+  }
 
-      aux = "nao_apto";
-      switch (aux) {
-        case "apto":
-          document.getElementById("departamento_medico_apto").checked = true;
-          break;
-        case "nao_apto":
-          document.getElementById(
-            "departamento_medico_nao_apto"
-          ).checked = true;
-          break;
-      }
+  switch (dados.lateralidade) {
+    case "destro":
+      document.getElementById("lateralidade_destro").checked = true;
+      break;
+    case "canhoto":
+      document.getElementById("lateralidade_canhoto").checked = true;
+      break;
+    case "ambidestro":
+      document.getElementById("lateralidade_ambidestro").checked = true;
+      break;
+  }
 
-      aux = "BA";
-      document.getElementById("estado_origem").value = aux;
+  switch (dados.situacao) {
+    case "aprovado":
+      document.getElementById("situacao_aprovado").checked = true;
+      break;
+    case "dispensado":
+      document.getElementById("situacao_dispensado").checked = true;
+      break;
+  }
 
-      aux = "contratado";
-      switch (aux) {
-        case "adaptacao":
-          document.getElementById("etapa_adaptacao").checked = true;
-          break;
-        case "grupo_principal":
-          document.getElementById("etapa_grupo_principal").checked = true;
-          break;
-        case "contratado":
-          document.getElementById("etapa_contratado").checked = true;
-          break;
-      }
+  dados.componentes_tecnicos.split("|").map((x) => {
+    [nome, valor] = x.split("=");
+    document.getElementById(nome).value = valor;
+  });
 
-      aux = "999999999";
-      document.getElementById("identidade").value = aux;
+  dados.componentes_taticos.split("|").map((x) => {
+    [nome, valor] = x.split("=");
+    document.getElementById(nome).value = valor;
+  });
 
-      aux = "nome de pessoa";
-      document.getElementById("indicacao_externa").value = aux;
-
-      aux = "nome de pessoa";
-      document.getElementById("indicacao_interna").value = aux;
-
-      aux = "ambidestro";
-      switch (aux) {
-        case "destro":
-          document.getElementById("lateralidade_destro").checked = true;
-          break;
-        case "canhoto":
-          document.getElementById("lateralidade_canhoto").checked = true;
-          break;
-        case "ambidestro":
-          document.getElementById("lateralidade_ambidestro").checked = true;
-          break;
-      }
-
-      aux = 1;
-      document.getElementById("necessidade_alimentacao").checked = aux;
-      document.getElementById("necessidade_alojamento").checked = aux;
-      document.getElementById("necessidade_transporte").checked = aux;
-
-      aux = "nome atleta";
-      document.getElementById("nome").value = aux;
-
-      aux = "4";
-      document.getElementById("numero_ficha").innerText = aux;
-
-      aux = "Atacante";
-      document.getElementById("posicao").value = aux;
-
-      aux = "dispensado";
-      switch (aux) {
-        case "aprovado":
-          document.getElementById("situacao_aprovado").checked = true;
-          break;
-        case "dispensado":
-          document.getElementById("situacao_dispensado").checked = true;
-          break;
-      }
-
-      aux = "21 99999-9999";
-      document.getElementById("telefone1").value = aux;
-      document.getElementById("telefone2").value = aux;
-
-      aux = "nome do clube";
-      document.getElementById("ultimo_clube").value = aux;
-
-      aux =
-        "marcacao=2|deslocamento=4|posicionamento=3|reposicao=3|percepcao=2";
-      aux.split("|").map((x) => {
-        [nome, valor] = x.split("=");
-        document.getElementById(nome).value = valor;
-      });
-
-      aux = "cabeceio=5|chute=2|cruzamento=2|passe=3|recepcao=4|drible=4";
-      aux.split("|").map((x) => {
-        [nome, valor] = x.split("=");
-        document.getElementById(nome).value = valor;
-      });
-
-      aux =
-        "agilidade=4|reflexo=3|firmeza_pegada=3|defesa_bola_alta=4|defesa_bola_baixa=3|reposicao_mao=3|reposicao_pe=2|saida_bola_aerea=2|saida_bola_baixa=3";
-      aux.split("|").map((x) => {
-        [nome, valor] = x.split("=");
-        document.getElementById(nome).value = valor;
-      });
-    });
+  dados.fundamentos_goleiros.split("|").map((x) => {
+    [nome, valor] = x.split("=");
+    document.getElementById(nome).value = valor;
+  });
 
   // Object.keys(ficha.objeto_ficha).forEach((key)=>{
   //   content_preview.innerHTML += key + ': '

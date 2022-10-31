@@ -21,23 +21,38 @@
   <?php get_template_part('./templates/side', 'captacao'); ?>
 
 
-  <main class="dividirColunas">
-  <div class="segBotao" onclick="">
-    <a href="#" id="botao"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
-      <p>Salvar em pdf/ Imprimir</p>
-    </a>
+  <main>
+    <section id="ficha">
+  <div class="segBotao " onclick="">
+    <div>
+      <a href="#" id="botao" class="btn btn-success"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/imprimir.png" alt="">
+        <p>Salvar em pdf/ Imprimir</p>
+      </a>    
+    </div>
+    <div class="botaoSalvar btn btn-warning">
+      <a href="#" onclick="salvar_ficha()">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
+        <p>Salvar ficha</p>
+      </a href="#">
+    </div>
   </div>
-  <button  onclick="salvar_ficha()">
-    Salvar ficha
-  </button>
+  
     <?php get_template_part('./Captacao/formulario', 'ficha'); ?>
     
-  <div class="segBotao">
-    <a href="#" id="botao2"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/print_FILL0_wght400_GRAD0_opsz48.png" alt="">
-      <p>Salvar em pdf / Imprimir</p>
-    </a>
+    <div class="segBotao " onclick="">
+    <div>
+      <a href="#" id="botao2" class="btn btn-success"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/imprimir.png" alt="">
+        <p>Salvar em pdf/ Imprimir</p>
+      </a>    
+    </div>
+    <div class="botaoSalvar btn btn-warning">
+      <a href="#" onclick="salvar_ficha()">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
+        <p>Salvar ficha</p>
+      </a href="#">
+    </div>
   </div>
-
+</section>
   </main>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/ficha.js"></script>
 

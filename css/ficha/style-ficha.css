@@ -46,6 +46,15 @@ Version: 1.0
   background-color: rgb(70, 160, 108);
 } */
 
+#Div_numeroFicha{
+  display: grid;
+  grid-template-columns: auto 100px;
+}
+#numero_ficha{
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
 .geral {
   height: auto; /**/
   width: 783px;

@@ -1,15 +1,15 @@
 function salvar_ficha(){
   var url = "http://localhost:8001/captacao/save_ficha";
  
-  componentes_tecnicos = Array.from(document.querySelectorAll('#componentes_tecnicos input'))
+  componentes_tecnicos = Array.from(document.querySelectorAll('#componentes_tecnicos select'))
   .map((x)=>{ if (x.value === ''){return `${x.name}=${null}`} else{return `${x.name}=${x.value }`}})
   componentes_tecnicos = componentes_tecnicos.join('|')
   
-  componentes_taticos = Array.from(document.querySelectorAll('#componentes_taticos input'))
+  componentes_taticos = Array.from(document.querySelectorAll('#componentes_taticos select'))
   .map((x)=>{ if (x.value === ''){return `${x.name}=${null}`} else{return `${x.name}=${x.value }`}})
   componentes_taticos = componentes_taticos.join('|')
 
-  fundamentos_goleiros = Array.from(document.querySelectorAll('#fundamentos_goleiros input'))
+  fundamentos_goleiros = Array.from(document.querySelectorAll('#fundamentos_goleiros select'))
   .map((x)=>{ if (x.value === ''){return `${x.name}=${null}`} else{return `${x.name}=${x.value }`}})
   fundamentos_goleiros =  fundamentos_goleiros.join('|')
    
@@ -44,18 +44,18 @@ function clonarCidade(selCid, siglaEstadoFrm1, siglaEstadoFrm2, cloneForm2) {
 
 
 // Selecionando os dois campos capital e siglas frm1
-const frm1_Select_cid = document.getElementById("estados-brasil");
+const frm1_Select_cid = document.getElementById("estado_origem");
 const sg = document.querySelector("#sg-estado");
 const frm2_Select_cid = document.getElementById("frm2_Select_cid");
 const frm2_Select_cid_abrev = document.getElementById("frm2_Select_cid_abrev");
 //Selecionar campos a copiar
-const nomeAtletaFrm1 = document.getElementById("nomeFrm1");
-const identidadeFrm1 = document.getElementById("idtFrm1");
-const posicaoFrm1 = document.getElementById("posFrm1");
-const dtNascimentoFrm1 = document.getElementById("dtNascFrm1");
-const indicacaoFrm1 = document.getElementById("indFrm1");
-const ultClubeFrm1 = document.getElementById("ultClubeFrm1");
-const indFluFrm1 = document.getElementById("indFluFrm1");
+const nomeAtletaFrm1 = document.getElementById("nome");
+const identidadeFrm1 = document.getElementById("identidade");
+const posicaoFrm1 = document.getElementById("posicao");
+const dtNascimentoFrm1 = document.getElementById("data_nascimento");
+const indicacaoFrm1 = document.getElementById("indicacao_externa");
+const ultClubeFrm1 = document.getElementById("ultimo_clube");
+const indFluFrm1 = document.getElementById("indicacao_interna");
 const necessidadesFrm1 = document.querySelectorAll("#necessidadesFrm1 input");
 const pePreferencialFrm1 = document.querySelectorAll(
   "#pePreferencialFrm1 input"
@@ -103,7 +103,7 @@ vetor.forEach(clonarCampos);
 
 // Selecionar radio categoria
 
-const selecRadioFrm1 = document.getElementsByName("categoriaFrm1");
+const selecRadioFrm1 = document.getElementsByName("categoria");
 const selecRadioFrm2 = document.getElementsByName("categoriaFrm2");
 const etapaFrm1 = document.getElementsByName("etapaFrm1");
 const etapaFrm2 = document.getElementsByName("etapaFrm2");

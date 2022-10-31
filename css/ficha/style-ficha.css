@@ -7,6 +7,11 @@ Version: 1.0
 
 @import url('../style-captacao.css');
 
+body {
+  height: 1600px;  
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .topoForm2 {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -19,16 +24,23 @@ Version: 1.0
   height: 32px;
 }
 
+#ficha{
+  padding-top: 300px;
+}
+
 .segBotao {
   display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
+  gap: 20px;
+  grid-template-columns: auto auto;
+  justify-items: start;
+  justify-content: center;
   padding-bottom: 60px;
-  margin-top: 40px;
+  
 }
 
 #botao,
-#botao2 {
+#botao2,
+.botaoSalvar {
   display: grid;
   gap: 10px;
   align-items: center;
@@ -37,9 +49,16 @@ Version: 1.0
   font-weight: 600;
   text-transform: uppercase;
   color: rgb(233, 223, 223);
-  padding: 1rem 2rem;
-  background-color: rgb(8, 145, 65);
+  padding: 1rem 2rem;  
   border-radius: 4px;
+}
+
+.botaoSalvar a {
+  display: flex;
+  text-decoration: none;
+  color: rgb(233, 223, 223);
+  align-items: center;
+  gap: 10px;
 }
 
 /* #botao,#botao2:hover{

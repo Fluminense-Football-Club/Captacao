@@ -130,10 +130,10 @@
             <nav aria-label="...">
               <ul class="pagination pagination2">
                 <li class="page-item">
-                  <a class="page-link">Antes</a>
+                  <a class="page-link ">Antes</a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active" aria-current="page">
+                <li class="page-item "><a class="page-link" href="#">1</a></li>
+                <li class="page-item" aria-current="page">
                   <a class="page-link" href="#">2</a>
                 </li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>

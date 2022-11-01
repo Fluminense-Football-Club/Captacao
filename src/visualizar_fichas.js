@@ -1,4 +1,4 @@
-import { Duplicar_campos } from './module.js'
+import { Duplicar_campos } from "./module.js";
 
 function Coletar_fichas() {
   // Coletar dados
@@ -91,7 +91,9 @@ function Montar_Tabela(dados) {
     ficha.className = "fichas_view";
     ficha.id = "ficha" + element.numero_ficha;
     ficha.objeto_ficha = element;
-    ficha.onclick =  ()=>{Preview_ficha(ficha)};
+    ficha.onclick = () => {
+      Preview_ficha(ficha);
+    };
     let img_ficha = document.createElement("img");
     img_ficha.src = directory_uri + "/Captacao/assets/ficha.png";
     img_ficha.className = "img_ficha";
@@ -104,13 +106,13 @@ function Montar_Tabela(dados) {
     ficha.appendChild(img_ficha);
     ficha.appendChild(Destribuir_valores(element));
 
-    bloco_fichas.insertBefore(ficha,nav_page);
+    bloco_fichas.insertBefore(ficha, nav_page);
   });
 }
 
 function Preview_ficha(ficha) {
   openModal();
-  Duplicar_campos()
+  Duplicar_campos();
 
   let dados = ficha.objeto_ficha;
   let click = new Event("click");
@@ -130,7 +132,7 @@ function Preview_ficha(ficha) {
 
   document.getElementById("estado_origem").value = dados.estado_origem;
   document.getElementById("estado_origem").dispatchEvent(click);
-  
+
   document.getElementById("captador").value = dados.captador;
   document.getElementById("captador").dispatchEvent(keyup);
   document.getElementById("data_nascimento").value = dados.data_nascimento;
@@ -193,7 +195,9 @@ function Preview_ficha(ficha) {
       break;
     case "nao_apto":
       document.getElementById("departamento_medico_nao_apto").checked = true;
-      document.getElementById("departamento_medico_nao_apto").dispatchEvent(click);
+      document
+        .getElementById("departamento_medico_nao_apto")
+        .dispatchEvent(click);
       break;
   }
 
@@ -237,8 +241,8 @@ function Preview_ficha(ficha) {
       document.getElementById("situacao_dispensado").dispatchEvent(click);
       break;
   }
-  let nome
-  let valor 
+  let nome;
+  let valor;
   dados.componentes_tecnicos.split("|").map((x) => {
     [nome, valor] = x.split("=");
     document.getElementById(nome).value = valor;
@@ -253,9 +257,6 @@ function Preview_ficha(ficha) {
     [nome, valor] = x.split("=");
     document.getElementById(nome).value = valor;
   });
- 
-
-
 }
 
 function openModal() {
@@ -271,6 +272,88 @@ document.querySelectorAll(".modalClose").forEach((element, index) => {
 
 const directory_uri = "../../wp-content/themes/sgf";
 const bloco_fichas = document.getElementById("bloco_fichas");
-const nav_page = document.getElementById("nav_page")
+const nav_page = document.getElementById("nav_page");
 
 Coletar_fichas();
+
+//Paginação
+
+let linksPagination = document.querySelectorAll(".page-link");
+console.log(linksPagination);
+
+const addActive = (item) => {
+  item.classList.add("active");
+};
+const removeActive = (item) => {
+  item.classList.remove("active");
+};
+const addDisabled = (item) => {
+  item.classList.add("disabled");
+};
+const removeDisabled = (item) => {
+  item.classList.remove("disabled");
+};
+
+addActive(linksPagination[1]);
+addDisabled(linksPagination[0]);
+
+function changePage(page) {
+  linksPagination.forEach((item) => {
+    removeActive(item);
+  });
+
+  addActive(linksPagination[page]);
+
+  if (linksPagination[1].classList.contains("active")) {
+    addDisabled(linksPagination[0]);
+  } else {
+    removeDisabled(linksPagination[0]);
+  }
+  if (
+    linksPagination[linksPagination.length - 2].classList.contains("active")
+  ) {
+    addDisabled(linksPagination[linksPagination.length - 1]);
+  } else {
+    removeDisabled(linksPagination[linksPagination.length - 1]);
+  }
+}
+
+linksPagination.forEach((item, index) => {
+  if (index === 0) {
+    item.addEventListener("click", () => {
+      let ativo = document.getElementsByClassName("active")[0];
+      let indexAtivo = Array.from(linksPagination).indexOf(ativo);
+      changePage(indexAtivo - 1);
+    });
+  } else if (index === linksPagination.length - 1) {
+    item.addEventListener("click", () => {
+      let ativo = document.getElementsByClassName("active")[0];
+      let indexAtivo = Array.from(linksPagination).indexOf(ativo);
+      changePage(indexAtivo + 1);
+    });
+  } else {
+    item.addEventListener("click", () => {
+      changePage(index);
+    });
+  }
+});
+// linksPagination.forEach((item) => {
+//   linksPagination.forEach((item) => {
+//     removeActive(item);
+//   });
+//   item.addEventListener("click", () => {
+//     addActive(item);
+//     if (linksPagination[1].classList.contains("active")) {
+//       addDisabled(linksPagination[0]);
+//     } else {
+//       removeDisabled(linksPagination[0]);
+//     }
+//     if (
+//       linksPagination[linksPagination.length - 2].classList.contains("active")
+//     ) {
+//       addDisabled(linksPagination[linksPagination.length - 1]);
+//     } else {
+//       removeDisabled(linksPagination[linksPagination.length - 1]);
+//     }
+//   });
+// });

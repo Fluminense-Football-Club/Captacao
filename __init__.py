@@ -15,7 +15,7 @@ class AppCaptacao:
         def working():
             return "<h1>Working</h1>"
 
-        @app.route("/captacao/graficos")
+        @app.route("/captacao/graficos",methods=['GET'])
         @cross_origin()
         def bucar_graficos():
             graficos= GraficosCaptacao()

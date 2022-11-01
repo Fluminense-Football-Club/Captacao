@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # coding: UTF-8
 from SGF.dependencias_bancos import BD
+from flask import request
 import plotly.express as px
 import plotly.io as io
 import plotly.graph_objects as go
@@ -48,7 +49,7 @@ class GraficosCaptacao:
         })
         fig.update_layout(annotations=annotations)
         aprovados = io.to_html(fig,full_html=True)
-        return aprovados
+        return ['aprovados',aprovados]
 
 
     def Grafico_bar_aprovados_estado(self):
@@ -56,7 +57,7 @@ class GraficosCaptacao:
         cores = ['#13CE66','#900c0c']
         fig = px.bar(aprovados_estado, x='estado_origem', y=0, color = 'situacao',color_discrete_sequence=cores, barmode='group')
         aprovados_estado = io.to_html(fig,full_html=True)
-        return aprovados_estado
+        return ['aprovados_estado',aprovados_estado]
 
 
     def _porcentagem_lateral(self, data): 
@@ -161,7 +162,7 @@ class GraficosCaptacao:
         }
         fig = self._porcentagem_lateral(data)
         aprovados_posicao = io.to_html(fig,full_html=True)
-        return aprovados_posicao
+        return ['aprovados_posicao',aprovados_posicao]
     
 
     def Grafico_bar_aprovados_captador(self):
@@ -213,23 +214,22 @@ class GraficosCaptacao:
             })
         fig.update_layout(annotations=atributos)
         captador_aprovados = io.to_html(fig,full_html=True)
-        return captador_aprovados
+        return ['captador_aprovados',captador_aprovados]
+         
 
 
     def Carregar_graficos(self):
-        aprovados = self.Grafico_pie_aprovados()
-        aprovados_estado = self.Grafico_bar_aprovados_estado()
-        aprovados_posicao = self.Grafico_bar_horizontal_aprovados_posicao()
-        captador_aprovados = self.Grafico_bar_aprovados_captador()
-        dados_ficha = {
-            'graficos':[
-                {'fig':['aprovados',aprovados]},
-                {'fig':['aprovados_estado',aprovados_estado]},
-                {'fig':['aprovados_posicao',aprovados_posicao]},
-                {'fig':['captador_aprovados',captador_aprovados]}
-            ]
+        
+        dados_ficha = {}
 
+        decisao = {
+            '1':self.Grafico_pie_aprovados(),
+            '2':self.Grafico_bar_aprovados_estado(),
+            '3':self.Grafico_bar_horizontal_aprovados_posicao(),
+            '4': self.Grafico_bar_aprovados_captador()
         }
+        
+        dados_ficha['grafico'] = decisao[str(request.args.get('grafico'))]       
 
         return dados_ficha
 

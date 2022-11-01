@@ -2,6 +2,10 @@
 @import url('../style-captacao.css');
 @import url('./modal-fichas.css');
 
+.no_click{
+    pointer-events:none;
+}
+
 .fichas_view{
     display: grid;
     grid-template-columns: 1fr 400px;

@@ -1,5 +1,6 @@
 import { Duplicar_campos } from './module.js'
 
+const content_preview = document.getElementById("content_preview");
 function Coletar_fichas() {
   // Coletar dados
   var url = "http://localhost:8001/captacao/get_data";
@@ -35,7 +36,6 @@ function Coletar_fichas() {
   };
   var myRequest = new Request(url, myInit);
 
-  let content_preview = document.getElementById("content_preview");
 
   fetch(myRequest)
     .then(function (response) {
@@ -43,6 +43,7 @@ function Coletar_fichas() {
     })
     .then((pagina) => {
       content_preview.innerHTML += pagina;
+      content_preview.classList.add('no_click')
     });
 }
 
@@ -253,8 +254,8 @@ function Preview_ficha(ficha) {
     [nome, valor] = x.split("=");
     document.getElementById(nome).value = valor;
   });
- 
-
+  
+  Array.from(document.getElementsByName('editar_ficha')).map((x)=>{x.onclick = ()=>{content_preview.classList.toggle('no_click')}})
 
 }
 
@@ -262,8 +263,10 @@ function openModal() {
   document.getElementById("modal").classList.add("active");
 }
 
-const closeModal = () =>
-  document.getElementById("modal").classList.remove("active");
+const closeModal = () => {
+document.getElementById("modal").classList.remove("active");
+content_preview.classList.add('no_click')
+}
 
 document.querySelectorAll(".modalClose").forEach((element, index) => {
   element.addEventListener("click", closeModal);

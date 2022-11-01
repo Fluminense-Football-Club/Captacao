@@ -65,8 +65,9 @@ function chamarEvento(botao) {
 }
 chamarEvento(selBotao);
 chamarEvento(selBotao2);
-
-document.getElementById('save_ficha').onclick= ()=>{salvar_ficha()}
+Array.from(
+  document.getElementsByName('save_ficha')  
+).map((x)=>{x.onclick= ()=>{salvar_ficha()}})
 document
   .getElementById("ficha_avaliacao")
   .addEventListener("submit", (event) => {

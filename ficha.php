@@ -30,7 +30,7 @@
       </a>    
     </div>
     <div class="botaoSalvar btn btn-warning">
-      <a href="#" id='save_ficha'>
+      <a href="#" name='save_ficha'>
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
         <p>Salvar ficha</p>
       </a href="#">
@@ -46,7 +46,7 @@
       </a>    
     </div>
     <div class="botaoSalvar btn btn-warning">
-      <a href="#" onclick="salvar_ficha()">
+      <a href="#" name='save_ficha'>
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
         <p>Salvar ficha</p>
       </a href="#">

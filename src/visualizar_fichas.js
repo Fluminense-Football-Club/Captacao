@@ -104,7 +104,7 @@ function Montar_Tabela(dados) {
     ficha.appendChild(img_ficha);
     ficha.appendChild(Destribuir_valores(element));
 
-    bloco_fichas.appendChild(ficha);
+    bloco_fichas.insertBefore(ficha,nav_page);
   });
 }
 
@@ -271,5 +271,6 @@ document.querySelectorAll(".modalClose").forEach((element, index) => {
 
 const directory_uri = "../../wp-content/themes/sgf";
 const bloco_fichas = document.getElementById("bloco_fichas");
+const nav_page = document.getElementById("nav_page")
 
 Coletar_fichas();

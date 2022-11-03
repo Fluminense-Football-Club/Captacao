@@ -227,7 +227,7 @@ class web_content:
 
     def get_data(self):
         ficha_avaliacao = BD('ficha_entrada')
-        fichas = ficha_avaliacao.visualizar()
+        fichas = ficha_avaliacao.pesquisa_intervalo('numero_ficha',request.args.get('value_initial'), request.args.get('value_final'))
         ficha_avaliacao.finalizar()
 
         json_list = []
@@ -263,3 +263,5 @@ class web_content:
 
         json_dict = {'fichas':json_list}
         return json_dict
+    
+

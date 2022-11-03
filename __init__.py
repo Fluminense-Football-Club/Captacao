@@ -27,7 +27,7 @@ class AppCaptacao:
         def registrar_ficha():
             return ficha.save_ficha()
 
-        @app.route("/captacao/get_data")
+        @app.route("/captacao/get_data", methods=['GET'])
         @cross_origin()
         def coletar_ficha():
             ficha = web_content()

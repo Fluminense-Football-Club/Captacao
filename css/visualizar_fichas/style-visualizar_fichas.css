@@ -34,15 +34,22 @@
     font-weight: 600;
     margin-bottom: 10px;
 }
+
 #bloco_fichas{
     display: grid;
     grid-template-columns:1fr 1fr;
     gap: 10px;
+}
+
+.conteudo_fichas{
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 10px;
     width: 1200px;
     margin: 0 auto;
-    justify-items: center; 
-    
+    justify-items: center;   
 }
+
 
 .info{
     display: grid;

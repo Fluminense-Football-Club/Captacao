@@ -37,7 +37,7 @@
           </div>
         </div>
 
-        <div class="conteudo_fichas">
+        <div class="conteudo_fichas" id="conteudo_fichas">
           <div class="barra-topo-tabela-atletas align-end">
             <div class="barra-topo-tabela-atletas">
               <input
@@ -55,7 +55,7 @@
               </div>
             </div>
           </div>
-          <div id="bloco_fichas">
+          <div class='pagination-pageActive'>
 
             <div class="fichas_view" id="id1" onclick="Preview_ficha(id1)">
               <img

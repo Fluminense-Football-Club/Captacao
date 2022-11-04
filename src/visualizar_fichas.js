@@ -1,12 +1,12 @@
 import { Duplicar_campos } from "./module.js";
 
-function Coletar_fichas(value_initial,value_final) {
+function Coletar_fichas(value_initial, value_final) {
   // Coletar dados
   var url =
     "http://localhost:8001/captacao/get_data?" +
     new URLSearchParams({
-      value_initial:value_initial,
-      value_final:value_final
+      value_initial: value_initial,
+      value_final: value_final,
     });
 
   var myHeaders = new Headers();
@@ -26,8 +26,9 @@ function Coletar_fichas(value_initial,value_final) {
     .then(function (dados) {
       return Montar_Tabela(dados);
     });
-  }
-  function Coletar_pagina_preview(){
+}
+
+function Coletar_pagina_preview() {
   // Coletar página
   var url = "http://sgf.local/anagrama8904/";
 
@@ -41,14 +42,13 @@ function Coletar_fichas(value_initial,value_final) {
   };
   var myRequest = new Request(url, myInit);
 
-
   fetch(myRequest)
     .then(function (response) {
       return response.text();
     })
     .then((pagina) => {
       content_preview.innerHTML += pagina;
-      content_preview.classList.add('no_click')
+      content_preview.classList.add("no_click");
     });
 }
 
@@ -92,8 +92,13 @@ function Destribuir_valores(element) {
 
 function Montar_Tabela(dados) {
   let contador = 0;
+  let bloco_fichas = document.createElement("div");
+  let i = 1;
+  bloco_fichas.className = "pagination-pageDisabled";
+  bloco_fichas.id = `bloco_ficha${i}`;
   dados["fichas"].forEach((element) => {
     let ficha = document.createElement("div");
+
     ficha.className = "fichas_view";
     ficha.id = "ficha" + element.numero_ficha;
     ficha.objeto_ficha = element;
@@ -104,20 +109,32 @@ function Montar_Tabela(dados) {
     img_ficha.src = directory_uri + "/Captacao/assets/ficha.png";
     img_ficha.className = "img_ficha";
 
-    if (contador >= 20) {
-      return 0;
-    }
-    contador += 1;
-
     ficha.appendChild(img_ficha);
     ficha.appendChild(Destribuir_valores(element));
 
     bloco_fichas.appendChild(ficha);
+
+    contador += 1;
+    if (contador >= 20) {
+      i += 1;
+      view_bloco_fichas.push(bloco_fichas);
+      bloco_fichas = document.createElement("div");
+      bloco_fichas.className = "pagination-pageDisabled";
+      bloco_fichas.id = `bloco_ficha${i}`;
+      contador = 0;
+    }
   });
+  view_bloco_fichas.forEach((element) => {
+    if (element) {
+      conteudo_fichas.insertBefore(element, nav_page);
+    }
+  });
+
+  Activate_page(view_bloco_fichas[1]);
 }
 
 function Preview_ficha(ficha) {
-  openModal();
+  Open_modal();
   Duplicar_campos();
 
   let dados = ficha.objeto_ficha;
@@ -263,90 +280,106 @@ function Preview_ficha(ficha) {
     [nome, valor] = x.split("=");
     document.getElementById(nome).value = valor;
   });
-  
-  Array.from(document.getElementsByName('editar_ficha')).map((x)=>{x.onclick = ()=>{content_preview.classList.toggle('no_click')}})
 
+  Array.from(document.getElementsByName("editar_ficha")).map((x) => {
+    x.onclick = () => {
+      content_preview.classList.toggle("no_click");
+    };
+  });
 }
 
-function openModal() {
-  document.getElementById("modal").classList.add("active");
-}
-
-
-function changePage(page) {
-  linksPagination.forEach((item) => {
-    removeActive(item);
+function Change_page(page) {
+  links_pagination.forEach((item) => {
+    Remove_active(item);
+  });
+  view_bloco_fichas.forEach((item) => {
+    try {
+      Disable_page(item);
+    } catch (e) {
+      //pass
+    }
   });
 
-  addActive(linksPagination[page]);
+  Activate_page(view_bloco_fichas[page]);
+  Add_active(links_pagination[page]);
 
-  if (linksPagination[1].classList.contains("active")) {
-    addDisabled(linksPagination[0]);
+  if (links_pagination[1].classList.contains("active")) {
+    Add_disabled(links_pagination[0]);
   } else {
-    removeDisabled(linksPagination[0]);
+    Remove_disabled(links_pagination[0]);
   }
   if (
-    linksPagination[linksPagination.length - 2].classList.contains("active")
+    links_pagination[links_pagination.length - 2].classList.contains("active")
   ) {
-    addDisabled(linksPagination[linksPagination.length - 1]);
+    Add_disabled(links_pagination[links_pagination.length - 1]);
   } else {
-    removeDisabled(linksPagination[linksPagination.length - 1]);
+    Remove_disabled(links_pagination[links_pagination.length - 1]);
   }
 }
 
-const addActive = (item) => {
+const Activate_page = (item) => {
+  item.classList.add("pagination-pageActive");
+  item.classList.remove("pagination-pageDisabled");
+};
+const Disable_page = (item) => {
+  item.classList.add("pagination-pageDisabled");
+  item.classList.remove("pagination-pageActive");
+};
+const Add_active = (item) => {
   item.classList.add("active");
 };
-const removeActive = (item) => {
+const Remove_active = (item) => {
   item.classList.remove("active");
 };
-const addDisabled = (item) => {
+const Add_disabled = (item) => {
   item.classList.add("disabled");
 };
-const removeDisabled = (item) => {
+const Remove_disabled = (item) => {
   item.classList.remove("disabled");
 };
-
-const closeModal = () => {
-document.getElementById("modal").classList.remove("active");
-content_preview.classList.add('no_click')
+const Close_modal = () => {
+  modal.classList.remove("active");
+  content_preview.classList.add("no_click");
+};
+const Open_modal = () => {
+  modal.classList.add("active");
 };
 
-
 const directory_uri = "../../wp-content/themes/sgf";
-const bloco_fichas = document.getElementById("bloco_fichas");
 const nav_page = document.getElementById("nav_page");
+const conteudo_fichas = document.getElementById("conteudo_fichas");
 const content_preview = document.getElementById("content_preview");
-let linksPagination = document.querySelectorAll(".page-link");
+const modal = document.getElementById("modal");
+let links_pagination = document.querySelectorAll(".page-link");
+let view_bloco_fichas = [""];
 
-document.querySelectorAll(".modalClose").forEach((element, index) => {
-  element.addEventListener("click", closeModal);
+document.querySelectorAll(".modalClose").forEach((element) => {
+  element.addEventListener("click", Close_modal);
 });
 
-Coletar_pagina_preview()
-Coletar_fichas(0,200);
-
+Coletar_pagina_preview();
+Coletar_fichas(0, 200);
 
 //Paginação
-addActive(linksPagination[1]);
-addDisabled(linksPagination[0]);
+Add_active(links_pagination[1]);
+Add_disabled(links_pagination[0]);
 
-linksPagination.forEach((item, index) => {
+links_pagination.forEach((item, index) => {
   if (index === 0) {
     item.addEventListener("click", () => {
       let ativo = document.getElementsByClassName("active")[0];
-      let indexAtivo = Array.from(linksPagination).indexOf(ativo);
-      changePage(indexAtivo - 1);
+      let indexAtivo = Array.from(links_pagination).indexOf(ativo);
+      Change_page(indexAtivo - 1);
     });
-  } else if (index === linksPagination.length - 1) {
+  } else if (index === links_pagination.length - 1) {
     item.addEventListener("click", () => {
       let ativo = document.getElementsByClassName("active")[0];
-      let indexAtivo = Array.from(linksPagination).indexOf(ativo);
-      changePage(indexAtivo + 1);
+      let indexAtivo = Array.from(links_pagination).indexOf(ativo);
+      Change_page(indexAtivo + 1);
     });
   } else {
     item.addEventListener("click", () => {
-      changePage(index);
+      Change_page(index);
     });
   }
 });

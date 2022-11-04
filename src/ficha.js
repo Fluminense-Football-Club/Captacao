@@ -1,10 +1,9 @@
-import { Duplicar_campos } from './module.js'
+import { Duplicar_campos } from "./module.js";
 
-
-function salvar_ficha() {
-  let componentes_tecnicos
-  let componentes_taticos
-  let fundamentos_goleiros 
+function Salvar_ficha() {
+  let componentes_tecnicos;
+  let componentes_taticos;
+  let fundamentos_goleiros;
   var url = "http://localhost:8001/captacao/save_ficha";
 
   componentes_tecnicos = Array.from(
@@ -51,23 +50,23 @@ function salvar_ficha() {
   }).then((response) => response.json());
 }
 
-
-Duplicar_campos()
-
+function Chamar_evento(botao) {
+  botao.addEventListener("click", () => {
+    window.print();
+  });
+}
 
 const selBotao = document.getElementById("botao");
 const selBotao2 = document.getElementById("botao2");
 
-function chamarEvento(botao) {
-    botao.addEventListener("click", () => {
-      window.print();
-    });
-}
-chamarEvento(selBotao);
-chamarEvento(selBotao2);
-Array.from(
-  document.getElementsByName('save_ficha')  
-).map((x)=>{x.onclick= ()=>{salvar_ficha()}})
+Duplicar_campos();
+Chamar_evento(selBotao);
+Chamar_evento(selBotao2);
+Array.from(document.getElementsByName("save_ficha")).map((x) => {
+  x.onclick = () => {
+    Salvar_ficha();
+  };
+});
 document
   .getElementById("ficha_avaliacao")
   .addEventListener("submit", (event) => {

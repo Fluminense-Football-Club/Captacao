@@ -1,5 +1,5 @@
 export function Duplicar_campos() {
-  function clonarCidade(selCid, siglaEstadoFrm1, siglaEstadoFrm2, cloneForm2) {
+  function Clonar_cidade(selCid, siglaEstadoFrm1, siglaEstadoFrm2, cloneForm2) {
     selCid.addEventListener("click", () => {
       Array.from(selCid).forEach((item) => {
         if (item.value === selCid.value) {
@@ -11,13 +11,13 @@ export function Duplicar_campos() {
     });
   }
 
-  function clonarCampos([cmpSelecionado, cmpCopiado]) {
+  function Clonar_campos([cmpSelecionado, cmpCopiado]) {
     cmpSelecionado.addEventListener("keyup", () => {
       cmpCopiado.value = cmpSelecionado.value;
     });
   }
 
-  function clonarRadio([RadioFrm1, RadioFrm2]) {
+  function Clonar_radio([RadioFrm1, RadioFrm2]) {
     RadioFrm1.forEach((_, index) => {
       RadioFrm1[index].addEventListener("click", () => {
         RadioFrm2[index].checked = RadioFrm1[index].checked;
@@ -94,16 +94,16 @@ export function Duplicar_campos() {
   ];
 
   for (const index in vetorRadio) {
-    clonarRadio([vetorRadio[index][0], vetorRadio[index][1]]);
+    Clonar_radio([vetorRadio[index][0], vetorRadio[index][1]]);
   }
   for (const index in vetorNecessidades) {
-    clonarRadio([
+    Clonar_radio([
       vetorNecessidades[index][0],
       vetorNecessidades[index][1],
       vetorNecessidades[index][2],
     ]);
   }
 
-  clonarCidade(frm1_Select_cid, sg, frm2_Select_cid_abrev, frm2_Select_cid);
-  vetor.forEach(clonarCampos);
+  Clonar_cidade(frm1_Select_cid, sg, frm2_Select_cid_abrev, frm2_Select_cid);
+  vetor.forEach(Clonar_campos);
 }

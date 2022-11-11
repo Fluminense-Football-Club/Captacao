@@ -12,16 +12,16 @@
       </a>    
     </div>
     <div class="botaoSalvar btn btn-warning">
-      <a href="#" name='save_ficha'>
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
-        <p>Salvar ficha</p>
-      </a href="#">
+      <a href="#" name='save_ficha' >
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
+          <p>Salvar ficha</p>
+      </a>
     </div>
     <div class="botaoSalvar btn btn-success">
       <a href="#" name='editar_ficha'>
       <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
         <p>Editar ficha</p>
-      </a href="#">
+      </a>
     </div>
   </div>
         <div id="content_preview">

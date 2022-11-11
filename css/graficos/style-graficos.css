@@ -1,19 +1,74 @@
-@import url('../style-captacao.css');
+@import url("../style-captacao.css");
 
+body{
+  background-color: #ccf0e8;  
+  }
 
-.graficos{
+.container-graficos {
+  
+width: 1200px;
+  margin: 0 auto;
+  padding-top: 300px;
+}
+.graficos {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 2fr;
+}
+.fullColum {
+  grid-column: 1/-1;
+  height: 600px;
+}
+.standardLine {
+  height: 600px;
+  /* grid-column: 1/-1; */
+}
+
+.texto-gráficos{
     display: grid;
-    grid-template-columns: 1fr 1fr;  
-}
-.fullColum{
+    grid-template-columns: 4px auto;    
     grid-column: 1/-1;
-    height: 600px;
+    gap: 10px;
+    justify-content: start;
 }
-.standardLine{
-    height: 600px;
+
+.texto-gráficos p{
+font-size: 1rem;
+font-family: 'poppins';
+grid-column: 2;
+line-height: 1.3;
 }
-iframe{
-    height: 100%;
-    width: 100%;
-    display: block;
+
+.marker{
+    background-color: rgb(224, 148, 7);    
+}
+
+
+
+iframe {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+#graficos-all{  
+  font-family: 'poppins';
+  font-size: 1rem;
+  /* max-width: 100%; */
+  
+}
+
+.grid-select{
+  display: flex;
+  gap: 5px;  
+  align-items: center;
+  justify-content: end;  
+  margin-bottom: 60px;
+}
+
+.graficos-geo-localizacao,.graficos-localizacao-atletas,.teste{
+  display: none;
+}
+
+.ativa{
+  display: block;
 }

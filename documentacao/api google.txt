@@ -1,0 +1,15 @@
+AIzaSyCztYLt1JX-iampKYOrGbOx7say0bzOM4g
+
+==>Mapa com seleção por clique
+
+https://developers.google.com/maps/documentation/javascript/dds-boundaries/handle-events?hl=pt-br
+
+==> Mapa com mapa de calor
+
+https://developers.google.com/maps/documentation/javascript/earthquakes?hl=pt-br
+
+==> Mapa com visitas dos captadores
+
+https://developers.google.com/maps/documentation/javascript/combining-data?hl=pt-br
+
+==>Mapa com posição e fotos dos atletas.

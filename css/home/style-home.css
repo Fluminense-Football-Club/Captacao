@@ -1,14 +1,15 @@
 @import url('../style-captacao.css');
 
+
 .container-home{  
  
   width: 800px;
   height: 537px;
-  margin: 80px auto 200px auto;
+  margin: 300px auto 200px auto;
   background-color: white;
   box-shadow: 0 4px 4px rgba(0, 0,0, 0.25);  
   border-radius: 4px;  
-  z-index: 1000;
+  /* z-index: -2; */
   /* left: 403px; */
   /* top: px; */
   position: relative;  
@@ -52,20 +53,44 @@
 .apps{  
   display: flex;    
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
   /* flex-wrap: wrap;*/
-  flex: 1; 
+  /* flex: 1;  */
   align-self: center;
 }
 
 .apps li{
-  display: flex;
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  line-height: 1.5;
+  gap: 10px;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 4px 4px 4px 4px rgba(0, 0,0, 0.25);
-  padding: 1rem 2rem 1rem 1rem;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0,0, 0.25);  
   transform: 0.5s;
 }
+
+.linhaVertical-green{
+  background-color: green;
+  border-radius: 8px 0 0 8px ;
+}
+
+.linhaVertical-yellow{
+  background-color: #fbb130;
+  border-radius: 8px 0 0 8px ;
+}
+
+.linhaVertical-red{
+  background-color: #c91616;
+  border-radius: 8px 0 0 8px ;
+}
+
+/* .apps li::before{
+  content: '';
+  width: 1px;
+  height: 160px;
+  background-color: #0b601e;
+} */
 
 .apps li:hover{
   background-color: aquamarine;
@@ -81,6 +106,7 @@
   font-size: 1.25rem;
   color: #474747;
   align-items: center;
+  padding: 1rem 2rem 0.25rem 1rem;
 }
 
 .apps li a img{

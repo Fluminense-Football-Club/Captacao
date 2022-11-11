@@ -26,3 +26,35 @@ for (const x of [1, 2, 3, 4]) {
       document.getElementById(nome).appendChild(ifrm);
     });
 }
+
+let optionSelected = document.getElementById('graficos-all')
+let teste = document.querySelector('.teste')
+let graficosGeoLocalizacao = document.querySelector('.graficos-geo-localizacao')
+let graficosLocalizacaoAtletas = document.querySelector('.graficos-localizacao-atletas')
+
+// teste.classList.add('ativa')
+
+
+  Array.from(optionSelected).forEach((item)=>{
+    item.addEventListener('change',console.log('teste'))
+  })
+
+
+optionSelected.addEventListener('change', () => {
+  switch (optionSelected.value){
+    case '1':    
+    graficosGeoLocalizacao.classList.add('ativa')
+    console.log('teste')
+    break;
+
+    case '2':
+      graficosLocalizacaoAtletas.classList.add('ativa')
+    break;
+
+    case '3':
+      optionSelected.classList.add('active')
+    break;
+  }
+})
+;
+

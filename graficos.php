@@ -17,6 +17,7 @@
     <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/graficos.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type='module' src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/mapsApi.js"></script>
+    
 </head>
 <body>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -49,9 +50,8 @@
             </div>  
         </div>
         <!-- Fim -->
-        <div class="Container_graficos" pagina='Regiões visitadas'>
-            <div id="map"></div>
-                
+        <div class="Container_graficos" pagina='Captadores pelo Brasil'>
+            <div id="map"></div>                
             
         </div>
 

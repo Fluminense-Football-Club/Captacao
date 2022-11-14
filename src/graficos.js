@@ -27,34 +27,22 @@ for (const x of [1, 2, 3, 4]) {
     });
 }
 
-let optionSelected = document.getElementById('graficos-all')
-let teste = document.querySelector('.teste')
-let graficosGeoLocalizacao = document.querySelector('.graficos-geo-localizacao')
-let graficosLocalizacaoAtletas = document.querySelector('.graficos-localizacao-atletas')
+let optionSelected = document.getElementById("graficos-all");
+let Container_graficos = document.querySelectorAll(".Container_graficos");
 
-// teste.classList.add('ativa')
+Container_graficos.forEach((item, index) => {
+  let option = document.createElement("option");
+  option.value = index;
+  option.innerText = item.getAttribute("pagina");
+  optionSelected.appendChild(option);
+});
 
+Container_graficos[0].classList.add("ativa");
 
-  Array.from(optionSelected).forEach((item)=>{
-    item.addEventListener('change',console.log('teste'))
-  })
-
-
-optionSelected.addEventListener('change', () => {
-  switch (optionSelected.value){
-    case '1':    
-    graficosGeoLocalizacao.classList.add('ativa')
-    console.log('teste')
-    break;
-
-    case '2':
-      graficosLocalizacaoAtletas.classList.add('ativa')
-    break;
-
-    case '3':
-      optionSelected.classList.add('active')
-    break;
-  }
-})
-;
-
+optionSelected.addEventListener("change", () => {
+  console.log(Container_graficos)
+  Container_graficos.forEach((item) => {
+    item.classList.remove("ativa");
+  });
+  Container_graficos[optionSelected.value].classList.add("ativa");
+});

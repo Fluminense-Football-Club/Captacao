@@ -29,15 +29,12 @@
             <div>
         <select name="" id="graficos-all">
             <option value="0">Selecione o tipo de gráfico</option>
-            <option value="1">Captadores</option>
-            <option value="2">Regiões visitadas</option>
-            <option value="3">Atletas monitorados</option>
         </select>
         </div>
         </div>
 
         <!-- Gráficos vindos do banco -->
-        <div class="teste">
+        <div class="Container_graficos" pagina="Captadores">
             <div id="graficos" class="graficos">
                 <div class="texto-gráficos">
                 <div class="marker"></div>    
@@ -50,14 +47,18 @@
             </div>  
         </div>
         <!-- Fim -->
-
-        <div class="graficos-geo-localizacao">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, vitae quas adipisci veritatis repellat similique facilis harum perspiciatis nostrum consequatur ipsum, soluta quia provident nihil asperiores quaerat reprehenderit molestiae doloremque.</p>
+        <div class="Container_graficos" pagina='Regiões visitadas'>
+            <!-- <div class="graficos-geo-localizacao"> -->
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, vitae quas adipisci veritatis repellat similique facilis harum perspiciatis nostrum consequatur ipsum, soluta quia provident nihil asperiores quaerat reprehenderit molestiae doloremque.</p>
+            <!-- </div> -->
         </div>
 
-        <div class="graficos-localizacao-atletas">
-            <p>llalalalalala.</p>
+        <div class="Container_graficos" pagina='Atletas monitorados'>
+            <!-- <div class="graficos-localizacao-atletas"> -->
+                <p>llalalalalala.</p>
+            <!-- </div> -->
         </div>
+
         
     </main>
     <?php endwhile; else: ?>

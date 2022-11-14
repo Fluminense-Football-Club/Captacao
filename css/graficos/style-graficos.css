@@ -65,7 +65,7 @@ iframe {
   margin-bottom: 60px;
 }
 
-.graficos-geo-localizacao,.graficos-localizacao-atletas,.teste{
+.Container_graficos{
   display: none;
 }
 

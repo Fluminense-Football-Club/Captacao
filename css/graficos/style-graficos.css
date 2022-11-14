@@ -74,8 +74,9 @@ iframe {
 }
 
 #map {
-  height: 400px;
+  margin-bottom: 30px;
+  height: 600px;
   /* The height is 400 pixels */
-  width: 400px;
+  width: 60%;
   /* The width is the width of the web page */
 }

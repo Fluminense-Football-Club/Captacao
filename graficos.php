@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/css/graficos/style-graficos.css">
     
     <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/graficos.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type='module' src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/mapsApi.js"></script>
 </head>
 <body>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -48,9 +50,9 @@
         </div>
         <!-- Fim -->
         <div class="Container_graficos" pagina='Regiões visitadas'>
-            <!-- <div class="graficos-geo-localizacao"> -->
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, vitae quas adipisci veritatis repellat similique facilis harum perspiciatis nostrum consequatur ipsum, soluta quia provident nihil asperiores quaerat reprehenderit molestiae doloremque.</p>
-            <!-- </div> -->
+            <div id="map"></div>
+                
+            
         </div>
 
         <div class="Container_graficos" pagina='Atletas monitorados'>
@@ -68,8 +70,10 @@
    </div>
   </section>
  <?php endif; ?>
- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCztYLt1JX-iampKYOrGbOx7say0bzOM4g&callback=initMap&v=weekly"
+      defer
+    ></script>
+    
 </body>
 </html>

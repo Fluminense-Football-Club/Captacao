@@ -19,7 +19,13 @@ function initMap() {
     let local
     [nome, local] = item
     let caixa = document.createElement('div')
-    caixa.innerText = nome
+    caixa.style= 'width: 400px;'
+    let img = document.createElement('img')
+    // img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png'
+    let text = document.createElement('p')
+    text.innerText = nome
+    caixa.appendChild(text) 
+    caixa.appendChild(img)
 
     let marker = new google.maps.Marker({
       position: local,

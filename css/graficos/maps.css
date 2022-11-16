@@ -32,3 +32,13 @@
   height: 160px;
   object-fit: cover;
 }
+
+.botao_relatorios{
+  overflow-y:auto; 
+  height: 200px;
+}
+.botao_relatorios div{
+  cursor: pointer;
+  background-color: beige;
+  margin: 5px;
+}

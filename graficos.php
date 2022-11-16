@@ -17,6 +17,7 @@
     <script defer src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/graficos.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type='module' src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/src/mapsApi.js"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
     
 </head>
 <body>
@@ -51,16 +52,16 @@
         </div>
         <!-- Fim -->
         <div class="Container_graficos" pagina='Captadores pelo Brasil'>
-            <div id="map"></div>                
+            <div id="Captadores" class='map'></div>                
             
         </div>
 
         <div class="Container_graficos" pagina='Atletas monitorados'>
-            <!-- <div class="graficos-localizacao-atletas"> -->
-                <p>llalalalalala.</p>
-            <!-- </div> -->
+            <div id="Atletas" class='map'></div>     
         </div>
-
+        <div class="Container_graficos" pagina='Atletas nas pousadas'>
+            <div id="Atletas_pousadas" class='map'></div>     
+        </div>
         
     </main>
     <?php endwhile; else: ?>

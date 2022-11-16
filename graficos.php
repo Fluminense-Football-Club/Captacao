@@ -71,7 +71,7 @@
   </section>
  <?php endif; ?>
  <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCztYLt1JX-iampKYOrGbOx7say0bzOM4g&callback=initMap&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCztYLt1JX-iampKYOrGbOx7say0bzOM4g&callback=initMap&v=weekly&libraries=places"
       defer
     ></script>
     

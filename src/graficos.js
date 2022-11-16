@@ -42,7 +42,6 @@ Container_graficos.forEach((item, index) => {
 Container_graficos[0].classList.add("ativa");
 
 optionSelected.addEventListener("change", () => {
-  console.log(Container_graficos)
   Container_graficos.forEach((item) => {
     item.classList.remove("ativa");
   });

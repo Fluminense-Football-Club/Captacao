@@ -1,4 +1,5 @@
 import { Duplicar_campos } from "./module.js";
+const directory_uri = "../../wp-content/themes/sgf";
 
 function Salvar_ficha() {
   let componentes_tecnicos;
@@ -48,7 +49,7 @@ function Salvar_ficha() {
   let loading = document.createElement('img')
   let worning = document.getElementById('worning')
   
-  loading.src = 'https://www.pedraagroindustrial.com.br/static/img/banner-loading.gif'
+  loading.src = directory_uri+"/templates/assets/banner-loading.gif"
   loading.style = "width:150px;height:150px;"
   load_box.appendChild(loading)
   load_box.classList.add('active')

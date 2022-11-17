@@ -40,7 +40,7 @@
     <div id="worning">
     <div>
       <div class="image">
-        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Checkmark.svg/675px-Checkmark.svg.png'>
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/templates/assets/Checkmark.svg">      
       </div>
       <div class="text">
         <p>Ficha salva</p>

@@ -25,7 +25,7 @@
     <section id="ficha">
   <div class="segBotao " onclick="">
     <div>
-      <a href="#" id="botao" class="btn btn-success"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/imprimir.png" alt="">
+      <a href="#" id="botao" class="interagir_ficha btn btn-success"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/imprimir.png" alt="">
         <p>Salvar em pdf/ Imprimir</p>
       </a>    
     </div>

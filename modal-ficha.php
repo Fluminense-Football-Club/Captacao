@@ -19,7 +19,7 @@
     </div>
     <div class="botaoSalvar btn btn-success">
       <a href="#" name='editar_ficha'>
-      <img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/disquete.svg" alt="">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/templates/assets/lapis.svg" alt="">
         <p>Editar ficha</p>
       </a>
     </div>

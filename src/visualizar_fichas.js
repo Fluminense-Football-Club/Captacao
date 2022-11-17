@@ -106,7 +106,7 @@ function Montar_Tabela(dados) {
       Preview_ficha(ficha);
     };
     let img_ficha = document.createElement("img");
-    img_ficha.src = directory_uri + "/Captacao/assets/ficha.png";
+    img_ficha.src = directory_uri + "/Captacao/assets/fichaSearch.png";
     img_ficha.className = "img_ficha";
 
     ficha.appendChild(img_ficha);

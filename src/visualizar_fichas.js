@@ -1,4 +1,4 @@
-import { Duplicar_campos } from "./module.js";
+import { Duplicar_campos, Salvar_ficha } from "./module.js";
 
 function Coletar_fichas(value_initial, value_final) {
   // Coletar dados
@@ -284,6 +284,14 @@ function Preview_ficha(ficha) {
   Array.from(document.getElementsByName("editar_ficha")).map((x) => {
     x.onclick = () => {
       content_preview.classList.toggle("no_click");
+      Change_mode()
+    };
+  });
+  Array.from(document.getElementsByName("save_ficha")).map((x) => {
+    x.onclick = () => {
+      Change_mode();
+      Salvar_ficha();
+      content_preview.classList.toggle("no_click");
     };
   });
 }
@@ -315,6 +323,18 @@ function Change_page(page) {
   } else {
     Remove_disabled(links_pagination[links_pagination.length - 1]);
   }
+}
+
+function Change_mode(){
+  let navegadores = document.querySelectorAll('.change_mode')
+  navegadores.forEach((funcionalidade)=>{
+    if (funcionalidade.style.display === 'none'){
+      funcionalidade.style='display:block;'
+    }else{
+      funcionalidade.style='display:none;'
+    }
+
+  })
 }
 
 const Activate_page = (item) => {

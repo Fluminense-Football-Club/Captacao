@@ -27,6 +27,20 @@
 
     <main>
       <section id="visualizar-fichas">
+        <div id="load_box"></div>
+        <div id="worning">
+          <div>
+            <div class="image">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/templates/assets/Checkmark.svg">      
+            </div>
+
+            <div class="text">
+              <p>Ficha salva</p>
+            </div>
+            
+          </div>  
+        </div>
+    
         <div class="align-titulo">
           <div class="grid-titulo">
             <img

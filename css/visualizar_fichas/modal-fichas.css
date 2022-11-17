@@ -20,7 +20,7 @@
     gap: 20px;
     width: 50vw;
     
-    margin: 20vh auto;
+    margin: 25vh auto;
     padding-bottom: 20px;
     background-color: white;
     box-shadow: 1px 1px 10px black;
@@ -30,7 +30,7 @@
     display: flex;
     position: relative;
     justify-content: center;
-    height: 40px;
+    height: 80px;
     line-height: 40px;
     font-size: 1rem;
     background-color: #13ce66;
@@ -69,3 +69,6 @@
     padding: 0 20px;
   }
   
+  .geral{
+    margin-top: 0px;
+  }

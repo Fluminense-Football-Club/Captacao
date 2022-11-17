@@ -38,8 +38,9 @@ body {
   
 }
 
-#botao,
+
 #botao2,
+.interagir_ficha,
 .botaoSalvar {
   display: grid;
   gap: 10px;
@@ -105,6 +106,7 @@ body {
   width: 100%;
   transition: 1s;
   bottom: -300px;
+  z-index: 1;
 }
 #worning div{
   display: grid;

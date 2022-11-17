@@ -1,5 +1,5 @@
 <?php 
-  //Template name: ficha
+  //Template name: modelo_ficha
 ?>
 <form class="geral" id="ficha_avaliacao">
   <div class="container" id="printable">

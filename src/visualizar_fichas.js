@@ -30,7 +30,7 @@ function Coletar_fichas(value_initial, value_final) {
 
 function Coletar_pagina_preview() {
   // Coletar página
-  var url = "http://sgf.local/anagrama8904/";
+  var url = "http://sgf.local/modelo_ficha/";
 
   var myHeaders = new Headers();
 

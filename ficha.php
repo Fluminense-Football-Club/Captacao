@@ -37,7 +37,7 @@
     </div>
   </div>
   
-    <?php get_template_part('./Captacao/formulario', 'ficha'); ?>
+    <?php get_template_part('./Captacao/modelo', 'ficha'); ?>
     
     <div class="segBotao " onclick="">
     <div>

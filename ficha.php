@@ -36,7 +36,18 @@
       </a href="#">
     </div>
   </div>
-  
+    <div id="load_box"></div>
+    <div id="worning">
+    <div>
+      <div class="image">
+        <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Checkmark.svg/675px-Checkmark.svg.png'>
+      </div>
+      <div class="text">
+        <p>Ficha salva</p>
+      </div>
+      
+    </div>
+    </div>
     <?php get_template_part('./Captacao/modelo', 'ficha'); ?>
     
     <div class="segBotao " onclick="">

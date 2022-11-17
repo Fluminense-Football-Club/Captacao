@@ -44,11 +44,28 @@ function Salvar_ficha() {
   form.append("componentes_taticos", componentes_taticos);
   form.append("fundamentos_goleiros", fundamentos_goleiros);
 
+  let load_box = document.getElementById('load_box')
+  let loading = document.createElement('img')
+  let worning = document.getElementById('worning')
+  
+  loading.src = 'https://www.pedraagroindustrial.com.br/static/img/banner-loading.gif'
+  loading.style = "width:150px;height:150px;"
+  load_box.appendChild(loading)
+  load_box.classList.add('active')
+
   fetch(url, {
     method: "POST",
     body: form,
-  }).then((response) => response.json());
-}
+  }).then((response) => response.json()).then(()=>{ 
+    setTimeout(function () {
+    load_box.classList.remove('active')
+    worning.classList.add('active')
+    setTimeout(function () {worning.classList.remove('active')}, 2000);
+  }, 1000);
+    document.getElementById("ficha_avaliacao").reset()
+
+  });
+} 
 
 function Chamar_evento(botao) {
   botao.addEventListener("click", () => {

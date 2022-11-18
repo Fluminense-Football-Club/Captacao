@@ -1,5 +1,5 @@
 @import url('../ficha/style-ficha.css');
-@import url('../style-captacao.css');
+/* @import url('../style-captacao.css'); */
 @import url('./modal-fichas.css');
 
 .no_click{
@@ -38,9 +38,21 @@
     display: grid;
     grid-template-columns:1fr 1fr;
     gap: 10px;
+    transition: transform 1s;
+    transform: translateX(0)
+}
+#bloco_ficha1:checked{
+    transform: translateX(1000px);   
+    pointer-events:none;
+
 }
 
 .pagination-pageDisabled{
+    /* transition: all 0.5s;
+    transform: translate3d(10,0,9);
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 10px; */
     display: none;    
 }
 

@@ -42,3 +42,10 @@
   background-color: beige;
   margin: 5px;
 }
+
+
+.perfil_map_atleta p{
+  margin-top:10px;
+  text-align:center;
+  font-weight: bold;
+}

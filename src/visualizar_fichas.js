@@ -284,7 +284,7 @@ function Preview_ficha(ficha) {
   Array.from(document.getElementsByName("editar_ficha")).map((x) => {
     x.onclick = () => {
       content_preview.classList.toggle("no_click");
-      Change_mode()
+      Change_mode();
     };
   });
   Array.from(document.getElementsByName("save_ficha")).map((x) => {
@@ -294,6 +294,37 @@ function Preview_ficha(ficha) {
       content_preview.classList.toggle("no_click");
     };
   });
+  Array.from(document.getElementsByName("imprimir")).map((x) => {
+    x.onclick = () => {
+      imprimir_ficha(content_preview)
+    };
+  });
+  
+}
+
+function imprimir_ficha(pagina){
+  let head = document.head.innerHTML
+  let body = document.body.innerHTML
+  var normal_page = '<html><head>'+head+'</head><body>'+body+'</body></html>'
+  var divContents = pagina;
+        
+  document.head.innerHTML = `
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../wp-content/themes/sgf/Captacao/css/ficha/style-ficha.css">
+    <title>Ficha de Avaliação</title>
+    `
+  document.body.innerHTML = divContents.innerHTML
+
+  setTimeout(function () { window.print(); 
+  window.focus = document.location.reload(false)
+  },500); 
+  
+
 }
 
 function Change_page(page) {
@@ -325,16 +356,15 @@ function Change_page(page) {
   }
 }
 
-function Change_mode(){
-  let navegadores = document.querySelectorAll('.change_mode')
-  navegadores.forEach((funcionalidade)=>{
-    if (funcionalidade.style.display === 'none'){
-      funcionalidade.style='display:block;'
-    }else{
-      funcionalidade.style='display:none;'
+function Change_mode() {
+  let navegadores = document.querySelectorAll(".change_mode");
+  navegadores.forEach((funcionalidade) => {
+    if (funcionalidade.style.display === "none") {
+      funcionalidade.style = "display:block;";
+    } else {
+      funcionalidade.style = "display:none;";
     }
-
-  })
+  });
 }
 
 const Activate_page = (item) => {

@@ -201,7 +201,6 @@ function initMap_Captadores() {
 
   google.maps.event.addListener(map_Captadores, "zoom_changed", function () {
     var zoom = map_Captadores.getZoom();
-    console.log(zoom);
     if (zoom >= 6 && zoom < 8) {
       Change_Styles(1);
     } else if (zoom >= 8) {
@@ -245,11 +244,14 @@ function initMap_Atletas() {
     caixa.appendChild(caixa1);
     caixa.appendChild(caixa2);
     caixa1.appendChild(nomeCaptador);
+    caixa1.className = 'perfil_map_atleta'
 
     let div_relatorios = document.createElement("div");
     div_relatorios.className = "botao_relatorios";
-
-    for (var prop in [1, 2, 3]) {
+    let props = [[1,'23/04/22','Regular'], [2,'10/06/22','Avanço'], [3,'17/07/22','Avanço']]
+    
+    for (var prop of props ) {
+      
       let div_botoes = document.createElement("div");
       div_botoes.onclick = () => {
         window.location.href = "http://teste";
@@ -258,9 +260,9 @@ function initMap_Atletas() {
       let totalIndicados = document.createElement("p");
       let totalAprovados = document.createElement("p");
 
-      endCaptador.innerText = "Endereço:";
-      totalIndicados.innerText = "Data de Observação:";
-      totalAprovados.innerText = "Relatório:";
+      endCaptador.innerText = `Visita: ${prop[0]}`;
+      totalIndicados.innerText = `Data de Observação: ${prop[1]}`;
+      totalAprovados.innerText = `Relatório: ${prop[2]}`;
 
       div_botoes.appendChild(endCaptador);
       div_botoes.appendChild(totalIndicados);

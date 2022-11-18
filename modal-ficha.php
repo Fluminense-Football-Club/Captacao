@@ -2,7 +2,7 @@
   <div class="modal-content">
     <header class="modal-header">
     <div class='change_mode'>
-      <a href="#" id="botao" class="interagir_ficha" onclick='window.print()'><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/imprimir.png" alt="">
+      <a href="#" id="botao" name='imprimir' class="interagir_ficha"><img src="<?php echo get_stylesheet_directory_uri(); ?>/Captacao/assets/imprimir.png" alt="">
         <p>Salvar em pdf/ Imprimir</p>
       </a>    
     </div>

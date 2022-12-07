@@ -1,4 +1,14 @@
 
+const directory_uri = "../../wp-content/themes/sgf";
+for (let y of ['aprovados','aprovados_estado','aprovados_posicao','captador_aprovados']){
+  // let load_box = document.createElement('div')
+  let loading = document.createElement('img')
+  loading.className='load_box'
+  loading.src = directory_uri+"/templates/assets/banner-loading.gif"
+  loading.style = "width:150px;height:150px;"
+  // load_box.appendChild(loading)
+  document.getElementById(y).appendChild(loading)
+}
 
 for (const x of [1, 2, 3, 4]) {
   var url =
@@ -26,6 +36,8 @@ for (const x of [1, 2, 3, 4]) {
       ifrm.setAttribute("srcdoc", grafico);
       ifrm.className = "iframe";
       document.getElementById(nome).appendChild(ifrm);
+      document.getElementById(nome).removeChild(document.getElementById(nome).querySelector('.load_box'))
+      
     });
 }
 

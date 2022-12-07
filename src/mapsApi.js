@@ -220,9 +220,9 @@ function initMap_Atletas() {
     center: Brasil,
   });
 
-  const relacao_captadores = [
-    ["Fred", { lat: -22.9068467, lng: -43.1728965 }],
-    ["Marcelo", { lat: 1.5957682, lng: -60.58206759999999 }],
+  const relacao_captadores = [ 
+    ["Fred", { lat: -17.86654464134723, lng: -41.50246563622029 }],
+    ["Marcelo", { lat: -22.9068467, lng: -43.1728965 }],
     ["Tiago Silva", { lat: -5.402580299999999, lng: -36.954107 }],
   ];
   // Create markers of Capitadores

@@ -126,7 +126,7 @@
         <div class="dt-nasc">
           <p>Data Nascimento</p>
 
-          <input type="text" id="data_nascimento" name="data_nascimento" />
+          <input type="date" id="data_nascimento" name="data_nascimento" />
         </div>
 
         <div class="indicacao">

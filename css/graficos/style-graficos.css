@@ -17,11 +17,15 @@ width: 1200px;
   grid-template-columns: 1fr 2fr;
 }
 .fullColum {
+  display: grid;
+  place-items: center;
   grid-column: 1/-1;
   height: 600px;
 }
 .standardLine {
   height: 600px;
+  display: grid;
+  place-items: center;
   /* grid-column: 1/-1; */
 }
 
@@ -80,4 +84,9 @@ iframe {
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+}
+
+
+.load_box{
+  grid-column: 1/-1;
 }

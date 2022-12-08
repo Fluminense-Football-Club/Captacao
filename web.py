@@ -34,12 +34,10 @@ class web_content:
             identidade = form['identidade']
 
         try: 
-            form['data_nascimento']    
+            data_nascimento = form['data_nascimento']    
         except:
             data_nascimento = ''
-        else:
-            data_nascimento = form['data_nascimento']
-
+        
         try: 
             form['telefone1']    
         except:
@@ -223,6 +221,7 @@ class web_content:
         'componentes_taticos':componentes_taticos,
         'fundamentos_goleiros':fundamentos_goleiros,
         }
+        ficha_avaliacao.cadastro(colunas_dados=dados_ficha, id = id)
         return dados_ficha
 
     def get_data(self):

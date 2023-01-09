@@ -111,7 +111,7 @@ export function Salvar_ficha(clean = false) {
   let componentes_tecnicos;
   let componentes_taticos;
   let fundamentos_goleiros;
-  var url = "http://localhost:8001/captacao/save_ficha";
+  var url = window.location.origin+":8001/captacao/save_ficha";
 
   componentes_tecnicos = Array.from(
     document.querySelectorAll("#componentes_tecnicos select")

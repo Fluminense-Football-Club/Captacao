@@ -3,7 +3,7 @@ import { Duplicar_campos, Salvar_ficha } from "./module.js";
 function Coletar_fichas(value_initial, value_final) {
   // Coletar dados
   var url =
-    "http://localhost:8001/captacao/get_data?" +
+    window.location.origin+":8001/captacao/get_data?" +
     new URLSearchParams({
       value_initial: value_initial,
       value_final: value_final,
@@ -30,7 +30,7 @@ function Coletar_fichas(value_initial, value_final) {
 
 function Coletar_pagina_preview() {
   // Coletar página
-  var url = "http://sgf.local/modelo_ficha/";
+  var url = "/modelo_ficha/";
 
   var myHeaders = new Headers();
 

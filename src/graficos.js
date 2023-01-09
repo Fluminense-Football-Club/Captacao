@@ -12,7 +12,7 @@ for (let y of ['aprovados','aprovados_estado','aprovados_posicao','captador_apro
 
 for (const x of [1, 2, 3, 4]) {
   var url =
-    "http://localhost:8001/captacao/graficos?" +
+    window.location.origin+":8001/captacao/graficos?" +
     new URLSearchParams({
       grafico: x,
     });

@@ -11,30 +11,30 @@ class AppCaptacao:
         app = Flask(__name__)
 
         @app.route("/captacao")
-        @cross_origin()
+        @cross_origin(origin='*')
         def working():
             return "<h1>Working</h1>"
 
         @app.route("/captacao/graficos",methods=['GET'])
-        @cross_origin()
+        @cross_origin(origin='*')
         def bucar_graficos():
             graficos= GraficosCaptacao()
             return graficos.Carregar_graficos()
         
         ficha = web_content()
         @app.route("/captacao/save_ficha", methods=['POST'])
-        @cross_origin()
+        @cross_origin(origin='*')
         def registrar_ficha():
             return ficha.save_ficha()
 
         @app.route("/captacao/get_data", methods=['GET'])
-        @cross_origin()
+        @cross_origin(origin='*')
         def coletar_ficha():
             ficha = web_content()
             return ficha.get_data()
 
         print('working...')
-        http_server = WSGIServer(("127.0.0.1", 8001), app)
+        http_server = WSGIServer(("", 8001), app)
         http_server.serve_forever()
 
 if __name__ == "__main__":
